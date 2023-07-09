@@ -1,0 +1,34 @@
+[
+	{
+		"amount": 1,
+		"image": [
+			"./img/cart/1.png",
+			"./img/cart/3.png",
+			"./img/cart/2.png",
+			"./img/cart/4.png"
+		],
+		"name": "Augvape Druga Squonker Kit model Q445",
+		"price": 399,
+		"sale": 799,
+		"cashback": 20,
+		"type": "HOT",
+		"star": 3,
+		"reviews": ["Вообще топ", "Вчера купил, мне понравилось", "Пацаны советую"]
+	},
+	{
+		"amount": 1,
+		"image": [
+			"./img/cart/4.png",
+			"./img/cart/1.png",
+			"./img/cart/2.png",
+			"./img/cart/3.png"
+		],
+		"name": "Augvape Druga Squonker Kit model Q445",
+		"price": 599,
+		"sale": 799,
+		"cashback": 20,
+		"type": "NEW",
+		"star": 3,
+		"reviews": ["Вообще топ", "Вчера купил, мне понравилось", "Пацаны советую"]
+	}
+]

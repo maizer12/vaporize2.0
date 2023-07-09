@@ -1,0 +1,26 @@
+.like-setting {
+	display: flex;
+	column-gap: 15px;
+	&__item {
+		cursor: pointer;
+		svg {
+			path {
+				transition: 0.7s;
+			}
+		}
+		&:hover {
+			svg {
+				path {
+					fill: #9524ac;
+				}
+			}
+		}
+	}
+}
+.item-like-active {
+	svg {
+		path {
+			fill: #9524ac;
+		}
+	}
+}

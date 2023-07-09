@@ -1,0 +1,19 @@
+@import './null.scss';
+
+main {
+	height: 100%;
+	flex: 1 0 auto;
+}
+footer {
+	flex: 0 0 auto;
+}
+#root {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.container {
+	width: 1470px;
+	padding: 0px 10px;
+	margin: 0px auto;
+}

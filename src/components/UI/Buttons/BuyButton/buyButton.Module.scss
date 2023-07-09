@@ -1,0 +1,22 @@
+.buy-button {
+	color: #fff;
+	display: block;
+	padding: 14px 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 1.1;
+	text-align: center;
+	background-color: #df3616;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	column-gap: 14px;
+	justify-content: center;
+	transition: 0.7s;
+	position: relative;	
+    cursor: pointer;
+    &:hover{
+        background-color: #7f308d;
+    }
+}

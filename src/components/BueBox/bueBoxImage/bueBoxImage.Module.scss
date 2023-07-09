@@ -1,0 +1,24 @@
+.bue-image {
+	img {
+		object-fit: cover;
+	}
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		width: 480px;
+		margin: 0px auto;
+		margin-top: 20px;
+	}
+	&__item {
+		cursor: pointer;
+		opacity: 0.4;
+		transition: 0.7s;
+	}
+}
+.min-active {
+	opacity: 1;
+	border: #92499e solid 2px;
+	img {
+		object-fit: cover;
+	}
+}

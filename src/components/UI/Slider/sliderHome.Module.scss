@@ -1,0 +1,150 @@
+.slider {
+	background-color: #461e4d;
+	width: 100%;
+	background-size: cover;
+	&__content {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #fff;
+	}
+	&__product {
+		display: flex;
+		align-items: flex-end;
+		height: 520px;
+	}
+	&__item {
+		display: flex;
+		justify-content: space-between;
+		width: 1200px;
+		height: 600px;
+		margin: 0px auto;
+	}
+	&__text {
+		width: 470px;
+	}
+	&__title {
+		font-size: 72px;
+		font-weight: 700;
+		line-height: 85px;
+		letter-spacing: 0em;
+		text-align: left;
+		text-transform: uppercase;
+	}
+	&__text {
+		font-size: 16px;
+		font-weight: 400;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	&__btn {
+		margin-top: 50px;
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 24px;
+		letter-spacing: 0em;
+		text-align: left;
+		display: inline-block;
+		width: 270px;
+		padding: 15px 0;
+		text-align: center;
+	}
+	&__numbers {
+		display: flex;
+		flex-direction: column;
+		row-gap: 15px;
+		align-items: flex-end;
+		margin-right: 20px;
+	}
+	&__price-sale {
+		font-size: 36px;
+		font-weight: 900;
+		line-height: 42px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #fff;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			width: 120%;
+			background-color: #fff;
+			height: 2px;
+			top: 16px;
+			left: -17px;
+			transform: rotate(161deg);
+		}
+	}
+	&__price {
+		font-size: 48px;
+		font-weight: 900;
+		line-height: 56px;
+		letter-spacing: 0em;
+		text-align: left;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+			'Lucida Sans', Arial, sans-serif;
+		background-color: #c62206;
+		color: #fff;
+		padding: 7px 24px;
+	}
+	&__percent {
+		color: #fff;
+		font-size: 60px;
+		font-weight: 900;
+		line-height: 70px;
+		text-align: left;
+		position: absolute;
+		right: 0;
+		top: 84px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 191px;
+		height: 191px;
+		background-color: #c62206;
+		border-radius: 50%;
+	}
+}
+.swiper-button-next,
+.swiper-button-prev {
+	border: 1px solid rgb(255, 254, 254);
+	border-radius: 50%;
+	width: 57px;
+	height: 57px;
+}
+.swiper-pagination-bullet {
+	width: 6px;
+	height: 6px;
+	padding: 5px;
+	position: relative;
+	background-color: #fff;
+	&::before {
+		content: '';
+		left: 50%;
+		top: 50%;
+		transform: translateY(-50%) translateX(-50%);
+		position: absolute;
+		width: 25px;
+		height: 25px;
+		border: 1px solid rgb(255, 255, 255);
+		border-radius: 50%;
+		z-index: 3;
+	}
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+	font-family: swiper-icons;
+	font-size: var(--swiper-navigation-size);
+	text-transform: none !important;
+	letter-spacing: 0;
+	font-variant: initial;
+	line-height: 1;
+	color: rgb(255, 255, 255);
+	font-size: 27px;
+}
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+	.swiper-pagination-bullet {
+	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 14px);
+}

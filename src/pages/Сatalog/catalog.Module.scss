@@ -1,0 +1,45 @@
+.catalog {
+	max-width: 1140px;
+	margin: 0 auto;
+	&__title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 48px;
+	}
+	&__content {
+		display: flex;
+		column-gap: 30px;
+	}
+	&__list {
+		width: 100%;
+	}
+}
+
+.catalog-desc {
+	padding: 50px 0;
+	border-top: 1px solid #CBCBCB;
+	margin-top: 50px;
+	&__title {
+		font-size: 24px;
+		font-weight: 700;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 30px;
+		
+	}
+	&__text {
+		
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 1.6;
+		letter-spacing: 0em;
+		text-align: left;
+		color:#616161;
+		white-space: pre-line;
+		
+	}
+}

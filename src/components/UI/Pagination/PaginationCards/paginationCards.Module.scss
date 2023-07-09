@@ -1,0 +1,32 @@
+.cards-pagination {
+    display: flex;
+    margin-left: 47%;
+    margin-top: 40px;
+    column-gap: 20px;
+    &__item {
+        width: 28px;
+        height: 28px;
+        border: 1px solid black;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 12px;
+        font-weight: 500;
+        line-height: 1.1;
+        letter-spacing: 0em;
+        text-align: center;
+        cursor: pointer;
+        transition: 0.7s;
+        &:hover {
+            color: #df3616;
+            border-color: #df3616;
+            box-shadow: 1px 0 2px 0px #df3616;
+        }
+    }
+}
+.active-pag {
+    color: #df16df;
+    border-color: #df16aa;
+    box-shadow: 1px 0 2px 0px #df16c4;
+}

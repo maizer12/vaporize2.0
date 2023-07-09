@@ -1,0 +1,130 @@
+.cart {
+	max-width: 255px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	z-index: 4;
+	position: relative;
+	cursor: pointer;
+	transition: 0.7s;
+	&__img {
+		position: relative;
+		overflow: hidden;
+		object-fit: cover;
+	}
+	&__type {
+		position: absolute;
+		top: 30px;
+		padding: 4px 16px;
+		&-span {
+			content: '';
+			top: 0;
+			left: -10px;
+			transform: skew(-27deg);
+			position: absolute;
+			width: 110%;
+			height: 100%;
+		}
+		&-text {
+			position: relative;
+			z-index: 2;
+			color: #fff;
+			font-size: 14px;
+			font-weight: 700;
+			line-height: 1.2;
+			letter-spacing: 0em;
+			text-align: center;
+		}
+	}
+	&__title {
+		font-size: 16px;
+		font-weight: 700;
+		line-height: 21px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-top: 23px;
+		color: black;
+	}
+	&__rating {
+		margin-top: 16px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__reviews {
+		color: #cbcbcb;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	&__price-status {
+		margin-top: 13px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	&__status {
+		color: #31b71b;
+		font-size: 14px;
+		font-weight: 500;
+		line-height: 1.1;
+	}
+	&__num {
+		font-size: 28px;
+		font-weight: 700;
+		line-height: 33px;
+		letter-spacing: 0em;
+		text-align: left;
+		margin-bottom: 3px;
+		color: black;
+	}
+	&__sale {
+		font-size: 16px;
+		font-weight: 500;
+		line-height: 1.2;
+		color: #989898;
+		position: relative;
+		&::before {
+			content: '';
+			position: absolute;
+			border-bottom: 1px solid #989898;
+			width: 70%;
+			top: 50%;
+			left: 0;
+		}
+	}
+}
+.cart-bottom {
+	opacity: 0;
+	left: 20px;
+	overflow-y: visible;
+	bottom: 25px;
+	width: 100%;
+	max-width: 255px;
+	z-index: 20;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	transition: 0.7s;
+	&__icons {
+		display: flex;
+		column-gap: 11px;
+	}
+}
+.active {
+	opacity: 1;
+}
+.active-cart {
+	background-color: #fff;
+	z-index: 10;
+	min-width: 295px;
+	width: 100%;
+	padding: 18px;
+	box-shadow: 0 0 10px 0 black;
+	padding-bottom: 90px;
+	.cart-bottom {
+		display: flex;
+	}
+}

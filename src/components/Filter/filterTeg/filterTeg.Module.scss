@@ -1,0 +1,33 @@
+.filter-teg {
+	&__items {
+		display: flex;
+		column-gap: 15px;
+		width: 320px;
+		flex-wrap: wrap;
+	}
+	&__name {
+		margin-top: 17px;
+		font-size: 14px;
+		font-weight: 700;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+	&__item {
+		padding: 5px 15px;
+		border: #cbcbcb solid 1px;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-top: 17px;
+		transition: 0.7s;
+		font-size: 13px;
+		font-weight: 400;
+		line-height: 1.2;
+		letter-spacing: 0em;
+		text-align: center;
+	}
+}
+.teg-active {
+	background-color: #7f308d;
+	color: #fff;
+}

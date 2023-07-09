@@ -1,0 +1,34 @@
+.breadcrumbs {
+	display: flex;
+	column-gap: 10px;
+	padding: 20px 0;
+	&__item {
+		font-size: 14px;
+		font-weight: 400;
+		line-height: 16px;
+		letter-spacing: 0em;
+		text-align: left;
+		color: #747474;
+		font-weight: 500;
+		cursor: pointer;
+        position: relative;
+        padding-right: 15px;
+        &::after{
+            content:'';
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            background-color: #747474;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            position: absolute;
+        }
+		&:last-child{
+			color: black;
+            &::after{
+                background: none;
+            }
+		}
+	}
+}
