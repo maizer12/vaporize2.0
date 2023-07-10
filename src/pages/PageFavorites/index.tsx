@@ -3,7 +3,7 @@ import FavoritesItem from '../../components/FavoritesItem'
 import { AppSelector } from '../../hooks'
 import './favorites.Module.scss'
 
-const Favorites = () => {
+const PageFavorites = () => {
 	const FavoritesDB = AppSelector(state => state.favoriteSlice.favoritesDB)
 
 	const breadcrumbs = ['Головна', 'Обране']
@@ -19,4 +19,4 @@ const Favorites = () => {
 	)
 }
 
-export default Favorites
+export default PageFavorites

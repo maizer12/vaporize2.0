@@ -3,7 +3,7 @@ import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import './blog.Module.scss'
 import BlogItem from '../../components/News/NewsItem'
 import BlogDB from '../../services/newsItems.json'
-const Blog = () => {
+const PageBlog = () => {
 	const breadcrumbs = ['Блог', 'Поради']
 	return (
 		<main className='blog'>
@@ -16,4 +16,4 @@ const Blog = () => {
 	)
 }
 
-export default Blog
+export default PageBlog

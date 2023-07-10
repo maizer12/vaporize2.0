@@ -1,4 +1,4 @@
-import React from 'react'
+import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { AppSelector } from '../../hooks'
 import { headerMenu } from './const'
@@ -9,10 +9,10 @@ import Contacts from './Contacts'
 import { logo } from '../../_config'
 import Search from '../Search'
 import HeaderButtons from './HeaderButtons'
-type IProps = {
-	setRegistrationOpen: React.Dispatch<React.SetStateAction<boolean>>
-}
-const Header = ({ setRegistrationOpen }: IProps) => {
+import Authorization from '../Authorization/Authorization'
+
+const Header = () => {
+	const [loginOpen, setLoginOpen] = useState(false)
 	const loginUser = AppSelector(state => state.auntificationSlice.userLogin)
 	return (
 		<>
@@ -40,7 +40,7 @@ const Header = ({ setRegistrationOpen }: IProps) => {
 									<button className='header__link'>{loginUser}</button>
 								) : (
 									<button
-										onClick={() => setRegistrationOpen(true)}
+										onClick={() => setLoginOpen(true)}
 										className='header__link'
 									>
 										Увійти
@@ -66,6 +66,7 @@ const Header = ({ setRegistrationOpen }: IProps) => {
 				</div>
 				<Navigation />
 			</header>
+			<Authorization open={loginOpen} setOpen={setLoginOpen} />
 		</>
 	)
 }

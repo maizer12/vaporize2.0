@@ -4,7 +4,7 @@ import SliderHome from '../../components/UI/Slider'
 import './Home.scss'
 import CartItemsDB from '../../services/cartItemsDB.json'
 
-const Home = () => {
+const PageHome = () => {
 	return (
 		<main>
 			<SliderHome />
@@ -63,4 +63,4 @@ const Home = () => {
 	)
 }
 
-export default Home
+export default PageHome

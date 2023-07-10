@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import './faq.Module.scss'
 import { faqText } from './faqText'
-const Faq = () => {
+const PageFaq = () => {
 	const breadcrumbs = [
 		'Головна',
 		'Електронні сигарети',
@@ -49,4 +49,4 @@ const Faq = () => {
 	)
 }
 
-export default Faq
+export default PageFaq

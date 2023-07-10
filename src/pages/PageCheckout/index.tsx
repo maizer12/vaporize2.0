@@ -2,7 +2,7 @@ import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import CheckoutForm from '../../components/CheckoutForm'
 import YourOrder from '../../components/YourOrder'
 import './checkout.Module.scss'
-const Checkout = () => {
+const PageCheckout = () => {
 	const breadcrumbs = [
 		'Головна',
 		'Електронні сигарети',
@@ -21,4 +21,4 @@ const Checkout = () => {
 	)
 }
 
-export default Checkout
+export default PageCheckout

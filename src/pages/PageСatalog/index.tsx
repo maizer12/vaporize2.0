@@ -5,7 +5,7 @@ import cartItemsDB from '../../services/cartItemsDB.json'
 import ListHeader from '../../components/Header/ListHeader'
 import CatalogCarts from '../../components/Products/CatalogCarts'
 import { useState } from 'react'
-const Catalog = () => {
+const PageCatalog = () => {
 	const [opinionFilter, setOpinionFilter] = useState('1')
 	const [sumCarts, setSumCarts] = useState<string>('25')
 	const [rowActivity, setRowActivity] = useState<boolean>(true)
@@ -82,4 +82,4 @@ const Catalog = () => {
 	)
 }
 
-export default Catalog
+export default PageCatalog

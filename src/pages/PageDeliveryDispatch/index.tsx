@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import './DeliveryDispatch.Module.scss'
 import { deliveryDesc } from './deliveryDesc'
-const DeliveryDispatch = () => {
+const PageDeliveryDispatch = () => {
 	const breadcrumbs = [
 		'Головна',
 		'Електронні сигарети',
@@ -51,4 +51,4 @@ const DeliveryDispatch = () => {
 	)
 }
 
-export default DeliveryDispatch
+export default PageDeliveryDispatch

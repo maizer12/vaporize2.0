@@ -6,7 +6,7 @@ import BasketItems from './basketItems'
 import { AppSelector } from '../../hooks'
 import PopupSuccessfulBue from '../../components/UI/Popups/popupSuccessfulBue'
 import { Link } from 'react-router-dom'
-const Basket = () => {
+const PageBasket = () => {
 	const BasketDB = AppSelector(state => state.cartSlice.BasketDBState)
 	const breadcrumbs = [
 		'Головна',
@@ -55,4 +55,4 @@ const Basket = () => {
 	)
 }
 
-export default Basket
+export default PageBasket

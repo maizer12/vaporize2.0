@@ -10,7 +10,7 @@ import BestReviews from '../../components/BueReviews/bestReviews'
 import BuePagination from '../../components/UI/Pagination/BuePagination'
 import PopupBue from '../../components/UI/Popups/popupBue'
 import './bue.Module.scss'
-const Bue = () => {
+const PageBue = () => {
 	const [popupSwitch, setPopupSwitch] = useState<boolean>(false)
 	const breadcrumbs = [
 		'Головна',
@@ -43,4 +43,4 @@ const Bue = () => {
 	)
 }
 
-export default Bue
+export default PageBue

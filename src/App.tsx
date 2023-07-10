@@ -2,42 +2,35 @@ import './assets/style/main.scss'
 import { useState } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
-import Bue from './pages/Bue'
-import Home from './pages/Home'
+import PageHome from './pages/PageHome'
 import { Route, Routes } from 'react-router-dom'
-import Basket from './pages/Basket'
-import Catalog from './pages/Сatalog'
-import Checkout from './pages/Checkout'
-import Blog from './pages/Blog'
-import PopupRegistrationLogin from './components/UI/Popups/popupRegistrationLogin'
-import DeliveryDispatch from './pages/DeliveryDispatch'
-import Faq from './pages/Faq'
-import Contact from './pages/Contact'
-import Favorites from './pages/Favorites'
+import PageBue from './pages/PageBue'
+import PageBasket from './pages/PageBasket'
+import PageCatalog from './pages/PageСatalog'
+import PageCheckout from './pages/PageCheckout'
+import PageBlog from './pages/PageBlog'
+import DeliveryDispatch from './pages/PageDeliveryDispatch'
+import PageFaq from './pages/PageFaq'
+import PageContact from './pages/PageContact'
+import PageFavorites from './pages/PageFavorites'
 function App() {
-	const [registrationOpen, setRegistrationOpen] = useState(false)
 	return (
 		<>
-			<Header setRegistrationOpen={setRegistrationOpen} />
+			<Header />
 			{
 				<Routes>
-					<Route path='/' element={<Home />} />
-					<Route path='/bue' element={<Bue />} />
-					<Route path='/basket' element={<Basket />} />
-					<Route path='/catalog' element={<Catalog />} />
-					<Route path='/checkout' element={<Checkout />} />
-					<Route path='/blog' element={<Blog />} />
+					<Route path='/' element={<PageHome />} />
+					<Route path='/bue' element={<PageBue />} />
+					<Route path='/basket' element={<PageBasket />} />
+					<Route path='/catalog' element={<PageCatalog />} />
+					<Route path='/checkout' element={<PageCheckout />} />
+					<Route path='/blog' element={<PageBlog />} />
 					<Route path='/delivery-dispatch' element={<DeliveryDispatch />} />
-					<Route path='/faq' element={<Faq />} />
-					<Route path='/contact' element={<Contact />} />
-					<Route path='/favorites' element={<Favorites />} />
+					<Route path='/faq' element={<PageFaq />} />
+					<Route path='/contact' element={<PageContact />} />
+					<Route path='/favorites' element={<PageFavorites />} />
 				</Routes>
 			}
-			{registrationOpen ? (
-				<PopupRegistrationLogin setRegistrationOpen={setRegistrationOpen} />
-			) : (
-				''
-			)}
 			<Footer />
 		</>
 	)

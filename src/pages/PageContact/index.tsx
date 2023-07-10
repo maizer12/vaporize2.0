@@ -1,7 +1,7 @@
 import React from 'react'
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import './contact.Module.scss'
-const Contact = () => {
+const PageContact = () => {
 	const breadcrumbs = ['Головна', 'Контакти']
 	return (
 		<main className='contact'>
@@ -12,4 +12,4 @@ const Contact = () => {
 	)
 }
 
-export default Contact
+export default PageContact
