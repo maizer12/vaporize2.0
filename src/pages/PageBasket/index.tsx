@@ -20,11 +20,6 @@ const PageBasket = () => {
 		sumPrices += price
 		sumCashback += casback
 	}
-	function test() {
-		window.scrollY = 10
-	}
-	test()
-	console.log(window.scrollY)
 	BasketDB.map(e => calcSum(e.price, e.cashback))
 	return (
 		<main className='basket'>

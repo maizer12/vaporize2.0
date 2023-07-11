@@ -58,6 +58,7 @@ const CatalogCarts = ({
 	}, [sortPrice])
 	const sumCart: number = items.length
 	const [sumPagination, setSumPagination] = useState<number>(0)
+
 	return (
 		<section className='carts-catalog'>
 			<div

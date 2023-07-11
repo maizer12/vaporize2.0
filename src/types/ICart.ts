@@ -8,4 +8,5 @@ export default interface ICart {
 	star: number
 	reviews: string[]
 	cashback: number
+	id: number
 }

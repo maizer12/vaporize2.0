@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import LikeSetting from '../../UI/LikeSetting'
-import './cart.Module.scss'
+import './Cart.scss'
 import { setCartAdd } from '../../../store/slice/cartSlice'
 import { Link } from 'react-router-dom'
 import { AppDispatch, AppSelector } from '../../../hooks'
@@ -85,7 +85,7 @@ const Cart = ({ cartElement, indx, open }: IProps) => {
 					<p className='cart__status'>в наявності</p>
 				</div>
 				<div className={`cart-bottom ${indx === open ? 'active' : ''}`}>
-					<Link to='/bue' onClick={() => bueCart()}>
+					<Link to={`/product/${cartElement.id}`} onClick={() => bueCart()}>
 						<BuyButton svg={true} width={141}>
 							в кошик
 						</BuyButton>

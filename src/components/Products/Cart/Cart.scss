@@ -9,7 +9,12 @@
 	&__img {
 		position: relative;
 		overflow: hidden;
-		object-fit: cover;
+		max-width: 255px;
+		height: 233px;
+		img {
+			width: 100%;
+			object-fit: cover;
+		}
 	}
 	&__type {
 		position: absolute;

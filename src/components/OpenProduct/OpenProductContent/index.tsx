@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import LikeSetting from '../../UI/LikeSetting'
-import './bueBoxContent.Modules.scss'
 import { Rating } from 'react-simple-star-rating'
 import FilterColor from '../../Filter/filterColor'
 import FilterTeg from '../../Filter/filterTeg'
@@ -9,13 +8,17 @@ import Cashback from '../../UI/Cashback'
 import { AppDispatch, AppSelector } from '../../../hooks'
 import { setBasketDB } from '../../../store/slice/cartSlice'
 import CalkulatorBue from '../../Calkulator/calkulatorBue'
+import './OpenProductContent.scss'
+import ICart from '../../../types/ICart'
 type IProps = {
 	setPopupSwitch: React.Dispatch<React.SetStateAction<boolean>>
+	product: ICart
 }
-const BueBoxContent = ({ setPopupSwitch }: IProps) => {
+const OpenProductContent = ({ setPopupSwitch, product }: IProps) => {
 	const basketDB = AppSelector(state => state.cartSlice.BasketDBState)
 	const dispath = AppDispatch()
 	const [sumElement, setSumElement] = useState(1)
+	const [rating, setRating] = useState(0)
 	const cartBueCart = AppSelector(state => state.cartSlice.cartBue)
 	const itemVan: string[] = ['Легкий', 'Середній', 'Важкий']
 	const itemTo: string[] = [
@@ -28,7 +31,6 @@ const BueBoxContent = ({ setPopupSwitch }: IProps) => {
 		'Середній',
 		'Важкий',
 	]
-	const [rating, setRating] = useState(0)
 	const handleRating = (rate: number) => {
 		setRating(rate)
 	}
@@ -72,7 +74,7 @@ const BueBoxContent = ({ setPopupSwitch }: IProps) => {
 						fill='none'
 						xmlns='http://www.w3.org/2000/svg'
 					>
-						<g clip-path='url(#clip0_180_9464)'>
+						<g clipPath='url(#clip0_180_9464)'>
 							<path
 								d='M38.6929 33.4643C38.3255 34.1663 37.9213 34.8313 37.6273 35.5333C37.2599 36.42 36.7087 37.3806 36.7087 38.3043C36.6719 40.632 36.5617 41.0384 34.3202 41.0384C31.7113 41.0754 29.1024 40.8906 26.5302 40.4842C25.2441 40.2995 24.6929 40.5211 24.4357 41.7034C24.2887 42.4793 23.8845 43.2552 23.9213 44.0311C24.0683 48.6864 23.811 53.4156 24.6929 57.9601C25.3176 61.1376 27.4488 64.0564 28.9921 67.0491C29.727 68.527 30.5722 69.931 31.3438 71.3719C31.2704 71.5566 31.1969 71.7783 31.0866 71.9631C29.7638 71.8892 28.3675 72 27.0814 71.7044C19.3281 70.0049 12.1627 66.9752 6.50395 61.1006C3.19686 57.6646 2.13125 53.6743 4.22573 49.1298C5.29135 46.8021 6.1365 44.3267 7.2756 42.036C9.59056 37.3437 9.03938 32.7253 6.94489 28.2178C6.02626 26.2965 4.9239 24.4492 3.67455 22.7127C-0.440932 16.912 -0.992113 10.668 1.50657 4.16529C3.12337 -0.0466726 6.4672 -2.63296 10.8032 -3.40885C18.2992 -4.81284 25.4646 -3.88916 31.6011 1.13563C36.3412 5.01507 38.6929 9.85513 37.6641 16.247C37.4436 17.7248 38.3622 19.4983 39.0604 21.0131C39.6116 22.1954 40.6772 23.1561 41.4856 24.2275C42.294 25.299 42.147 26.2227 40.9344 26.7769C38.9134 27.7375 38.2887 29.1045 39.1706 31.2474C39.3543 31.7278 38.7297 32.5775 38.4724 33.2795C38.5459 33.3534 38.6194 33.3904 38.6929 33.4643Z'
 								fill='#F6F6F6'
@@ -132,4 +134,4 @@ const BueBoxContent = ({ setPopupSwitch }: IProps) => {
 	)
 }
 
-export default BueBoxContent
+export default OpenProductContent

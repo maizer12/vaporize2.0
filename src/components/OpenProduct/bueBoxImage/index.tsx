@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 import './bueBoxImage.Module.scss'
 import ImageMin from './imageMin'
-import { AppSelector } from '../../../hooks'
-const BueBoxImage = () => {
-	const imgBueCart = AppSelector(state => state.cartSlice.cartBue)
+import ICart from '../../../types/ICart'
+type IProps = {
+	product: ICart
+}
+const BueBoxImage = ({ product }: IProps) => {
 	const [openImage, setOpenImage] = useState(0)
 	return (
 		<div className='bue-image'>
@@ -12,14 +14,14 @@ const BueBoxImage = () => {
 				<img
 					width={540}
 					height={494}
-					src={imgBueCart.image[openImage]}
+					src={product.image[openImage]}
 					alt='bue-img'
 				/>
 			</div>
 			<ImageMin
 				openImage={openImage}
 				setOpenImage={setOpenImage}
-				items={imgBueCart.image}
+				items={product.image}
 			/>
 		</div>
 	)

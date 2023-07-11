@@ -8,6 +8,7 @@ import { setBasketDB } from '../../../store/slice/cartSlice'
 type IProps = {
 	BasketDB: ICart[]
 }
+
 const BasketItems = ({ BasketDB }: IProps) => {
 	const dispatch = AppDispatch()
 	const [amountIndex, setAmountIndex] = useState({ sum: 1, index: 2, type: '' })

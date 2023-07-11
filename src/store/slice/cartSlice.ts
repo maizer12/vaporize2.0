@@ -16,6 +16,7 @@ const initialState = {
 		star: 3,
 		amount: 1,
 		reviews: ['Вообще топ', 'Вчера купил, мне понравилось', 'Пацаны советую'],
+		id: 0,
 	},
 	BasketDBState: BasketDB,
 }

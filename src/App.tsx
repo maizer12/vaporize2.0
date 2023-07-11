@@ -4,7 +4,7 @@ import Footer from './components/Footer'
 import Header from './components/Header'
 import PageHome from './pages/PageHome'
 import { Route, Routes } from 'react-router-dom'
-import PageBue from './pages/PageBue'
+import PageBue from './pages/PageProduct'
 import PageBasket from './pages/PageBasket'
 import PageCatalog from './pages/PageСatalog'
 import PageCheckout from './pages/PageCheckout'
@@ -20,7 +20,7 @@ function App() {
 			{
 				<Routes>
 					<Route path='/' element={<PageHome />} />
-					<Route path='/bue' element={<PageBue />} />
+					<Route path='/product/:productId' element={<PageBue />} />
 					<Route path='/basket' element={<PageBasket />} />
 					<Route path='/catalog' element={<PageCatalog />} />
 					<Route path='/checkout' element={<PageCheckout />} />
