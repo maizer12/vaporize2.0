@@ -12,7 +12,7 @@ const SliderHome = () => {
 		<section
 			className='slider'
 			style={{
-				backgroundImage: `url("./img/bg.png")`,
+				backgroundImage: `url("/img/bg.png")`,
 			}}
 		>
 			<div className='container'>
@@ -49,7 +49,7 @@ const SliderHome = () => {
 									className='slider__images'
 									width={350}
 									height={512}
-									src='./img/slider.png'
+									src='/img/slider.png'
 									alt='product'
 								/>
 								<div className='slider__percent'>-19%</div>
@@ -78,7 +78,7 @@ const SliderHome = () => {
 									className='slider__images'
 									width={350}
 									height={512}
-									src='./img/slider.png'
+									src='/img/slider.png'
 									alt='product'
 								/>
 								<div className='slider__percent'>-19%</div>

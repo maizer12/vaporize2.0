@@ -29,7 +29,6 @@ const PageProduct = () => {
 			<Breadcrumbs breadcrumbs={breadcrumbs} />
 			<OpenProduct />
 			<BuePagination setNumber={setNum} />
-
 			{pagination[num]}
 		</main>
 	)

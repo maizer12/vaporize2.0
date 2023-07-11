@@ -20,21 +20,21 @@ const BestReviews = () => {
 				<div className='social-reviews'>
 					<a href='#' className='social-reviews__link'>
 						<img
-							src='./img/social/1.svg'
+							src='/img/social/1.svg'
 							alt='social'
 							className='socials__icon'
 						/>
 					</a>
 					<a href='#' className='social-reviews__link'>
 						<img
-							src='./img/social/2.svg'
+							src='/img/social/2.svg'
 							alt='social'
 							className='socials__icon'
 						/>
 					</a>
 					<a href='#' className='social-reviews__link'>
 						<img
-							src='./img/social/3.svg'
+							src='/img/social/3.svg'
 							alt='social'
 							className='socials__icon'
 						/>

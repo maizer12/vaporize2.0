@@ -6,7 +6,7 @@ const KitItem = () => {
 			<img
 				width={207}
 				height={189}
-				src='./img/cart/1.png'
+				src='/img/products/1.jpg'
 				alt='kit-img'
 				className='kit-item__img'
 			/>

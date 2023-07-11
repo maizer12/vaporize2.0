@@ -2,10 +2,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/1.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/1.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -24,10 +24,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/2.jpg",
-			"./img/products/3.jpg",
-			"./img/products/1.jpg",
-			"./img/products/4.jpg"
+			"/img/products/2.jpg",
+			"/img/products/3.jpg",
+			"/img/products/1.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -47,10 +47,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/5.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/5.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 399,
@@ -64,10 +64,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/6.jpg",
-			"./img/products/4.jpg",
-			"./img/products/4.jpg",
-			"./img/products/4.jpg"
+			"/img/products/6.jpg",
+			"/img/products/4.jpg",
+			"/img/products/4.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 299,
@@ -81,10 +81,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/7.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/7.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 699,
@@ -98,10 +98,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/1.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/1.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 499,
@@ -115,10 +115,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -132,10 +132,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -149,10 +149,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -166,10 +166,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 399,
@@ -183,10 +183,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 299,
@@ -200,10 +200,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/1.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/1.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 699,
@@ -217,10 +217,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/1.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/1.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 499,
@@ -234,10 +234,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -251,10 +251,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -268,10 +268,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/4.jpg",
-			"./img/products/4.jpg",
-			"./img/products/4.jpg"
+			"/img/products/4.jpg",
+			"/img/products/4.jpg",
+			"/img/products/4.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,
@@ -285,10 +285,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/1.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/1.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 399,
@@ -302,10 +302,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/4.jpg",
-			"./img/products/4.jpg",
-			"./img/products/4.jpg"
+			"/img/products/4.jpg",
+			"/img/products/4.jpg",
+			"/img/products/4.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 299,
@@ -319,10 +319,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/1.jpg",
-			"./img/products/3.jpg",
-			"./img/products/2.jpg",
-			"./img/products/4.jpg"
+			"/img/products/1.jpg",
+			"/img/products/3.jpg",
+			"/img/products/2.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 699,
@@ -336,10 +336,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/2.jpg",
-			"./img/products/3.jpg",
-			"./img/products/1.jpg",
-			"./img/products/4.jpg"
+			"/img/products/2.jpg",
+			"/img/products/3.jpg",
+			"/img/products/1.jpg",
+			"/img/products/4.jpg"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 499,
@@ -353,10 +353,10 @@
 	{
 		"amount": 0,
 		"image": [
-			"./img/products/4.jpg",
-			"./img/products/1.jpg",
-			"./img/products/2.jpg",
-			"./img/products/3.png"
+			"/img/products/4.jpg",
+			"/img/products/1.jpg",
+			"/img/products/2.jpg",
+			"/img/products/3.png"
 		],
 		"name": "Augvape Druga Squonker Kit model Q445",
 		"price": 599,

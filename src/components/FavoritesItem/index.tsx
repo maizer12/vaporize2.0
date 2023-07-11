@@ -37,7 +37,7 @@ const FavoritesItem = ({ elementCart, index }: IProps) => {
 					className='favorites-item__btn'
 				>
 					<img
-						src='../../img/btn/1.svg'
+						src='.././img/btn/1.svg'
 						alt='remove'
 						className='favorites-item__img-remove'
 					/>

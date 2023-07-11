@@ -11,12 +11,12 @@ const PageHome = () => {
 			<CartItems item={CartItemsDB} title={'Новинки товарів'} />
 			<CartItems item={CartItemsDB} title={'Популярні товари'} />
 			<div className='banner'>
-				<img width={1110} height={304} src='./img/banner.jpg' alt='banner' />
+				<img width={1110} height={304} src='/img/banner.jpg' alt='banner' />
 			</div>
 			<CartItems item={CartItemsDB} title={'Товари зі знижкою'} />
 			<div className='home-text'>
 				<div className='home-text__img'>
-					<img width={13} height={19} src='./img/bord.svg' alt='border-icon' />
+					<img width={13} height={19} src='/img/bord.svg' alt='border-icon' />
 				</div>
 				<h3 className='home-text__title'>Магазин товарів для куріння</h3>
 				<p className='home-text__desc'>
@@ -56,7 +56,7 @@ const PageHome = () => {
 				</p>
 			</div>
 			<div className='banner'>
-				<img src='./img/banner.jpg' alt='banner' />
+				<img src='/img/banner.jpg' alt='banner' />
 			</div>
 			<News />
 		</main>

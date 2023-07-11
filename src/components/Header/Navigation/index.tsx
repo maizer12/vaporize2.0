@@ -16,7 +16,7 @@ function Navigation() {
 							className={`navigation__item + ${num === i ? 'active' : ''}`}
 						>
 							<Link to={e.path} className='navigation__link'>
-								{!i && <img src='./img/navbar.svg' alt='catalog' />}
+								{!i && <img src='/img/navbar.svg' alt='catalog' />}
 								{e.name}
 							</Link>
 						</li>

@@ -11,7 +11,7 @@ const YourOrder = () => {
 			<ul className='your-order__items'>
 				<li className='order-item order-item_space-between'>
 					<img
-						src='./img/cart/1.png'
+						src='/img/products/1.jpg'
 						width={112}
 						height={103}
 						alt='product'

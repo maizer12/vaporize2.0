@@ -10,7 +10,7 @@ const PopupBue = ({ setPopupSwitch }: IProps) => {
 		<section className='popup-bue'>
 			<h3 className='popup-bue__title'>Товар успішно доданий до кошика</h3>
 			<img
-				src='./img/smile.png'
+				src='/img/smile.png'
 				width={180}
 				alt='smile'
 				className='popup-bue__img'

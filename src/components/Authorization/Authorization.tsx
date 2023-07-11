@@ -15,7 +15,7 @@ function Authorization({ open, setOpen }: IProps) {
 	return (
 		<MainPopup open={open} setOpen={setOpen}>
 			<button onClick={closePopup} className='registration-login-close'>
-				<img src='./img/close.svg' alt='close' />
+				<img src='/img/close.svg' alt='close' />
 			</button>
 			{openType ? (
 				<LoginForm switchPopup={setOpenType} />

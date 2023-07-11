@@ -31,7 +31,7 @@ const BueDesc = () => {
 				має обсяг 0.7 мл і опір 1.8 Ом.
 			</p>
 			<img
-				src='../../img/bue-page/banner.jpg'
+				src='.././img/bue-page/banner.jpg'
 				style={{ objectFit: 'cover' }}
 				height={418}
 				width={1110}
@@ -59,7 +59,7 @@ const BueDesc = () => {
 				<img
 					width={540}
 					height={310}
-					src='./img/bue-page/1.jpg'
+					src='/img/bue-page/1.jpg'
 					alt='bue-desc'
 					className='bue-desc__img'
 				/>
@@ -68,7 +68,7 @@ const BueDesc = () => {
 				<img
 					width={540}
 					height={310}
-					src='./img/bue-page/2.jpg'
+					src='/img/bue-page/2.jpg'
 					alt='bue-desc'
 					className='bue-desc__img'
 				/>
