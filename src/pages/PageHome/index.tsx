@@ -1,4 +1,4 @@
-import CartItems from '../../components/Products/CartItems'
+import CartItems from '../../components/Products/ProductCards'
 import News from '../../components/News'
 import SliderHome from '../../components/UI/Slider'
 import './Home.scss'

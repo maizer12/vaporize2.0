@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react'
-import Cart from '../Cart'
+import Cart from '../ProductCard'
 import PaginationCards from '../../UI/Pagination/PaginationCards'
 import './catalogCarts.Module.scss'
 import ICart from '../../../types/ICart'

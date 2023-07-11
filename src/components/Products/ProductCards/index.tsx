@@ -1,20 +1,17 @@
 import { useState } from 'react'
-import Cart from '../Cart'
-import './cartItems.Module.scss'
+import Cart from '../ProductCard'
 import { Navigation, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/css'
-import 'swiper/css/navigation'
-import 'swiper/css/pagination'
-import 'swiper/css/scrollbar'
 import ICart from '../../../types/ICart'
 import BtnLink from '../../UI/Buttons/BtnLink'
+
+import './ProductCards.scss'
 interface IProps {
 	title?: string
 	item: ICart[]
 	rowActivity?: boolean
 }
-const CartItems = ({ title, item, rowActivity }: IProps) => {
+const ProductCards = ({ title, item, rowActivity }: IProps) => {
 	const [open, setOpen] = useState<number>(55)
 
 	return (
@@ -29,15 +26,16 @@ const CartItems = ({ title, item, rowActivity }: IProps) => {
 				<div className='items-cart__items'>
 					<Swiper
 						modules={[Navigation, A11y]}
-						slidesPerView={4}
-						spaceBetween={30}
+						slidesPerView='auto'
+						spaceBetween={0}
 						navigation
 					>
 						{item.map((e, i) => (
 							<SwiperSlide key={i}>
 								<div
 									className='items-cart__wrapper'
-									onClick={(): void => setOpen(i)}
+									onMouseEnter={(): void => setOpen(i)}
+									onMouseLeave={(): void => setOpen(55)}
 								>
 									<Cart open={open} indx={i} cartElement={e} />
 								</div>
@@ -50,4 +48,4 @@ const CartItems = ({ title, item, rowActivity }: IProps) => {
 	)
 }
 
-export default CartItems
+export default ProductCards

@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import './bueReviews.Modules.scss'
 import ReviewsItem from './reviewsItem'
-import CartItems from '../Products/CartItems'
+import CartItems from '../Products/ProductCards'
 import ReviewsButton from '../UI/Buttons/ReviewsButton'
 import CartDB from '../../services/cartItemsDB.json'
 const BueReviews = () => {
