@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import BueCompatible from '../../components/BueCompatible'
 import BueDelivery from '../../components/BueDelivery'
@@ -9,6 +9,7 @@ import BuePagination from '../../components/UI/Pagination/BuePagination'
 
 import './PageProduct.scss'
 import OpenProduct from '../../components/OpenProduct'
+import { clearScroll } from '../../assets/helpers/clearScroll'
 const PageProduct = () => {
 	const breadcrumbs = [
 		'Головна',
@@ -23,6 +24,9 @@ const PageProduct = () => {
 		<BestReviews />,
 		<BueDelivery />,
 	]
+	useEffect(() => {
+		clearScroll()
+	}, [])
 	const [num, setNum] = useState<number>(0)
 	return (
 		<main className='bue'>

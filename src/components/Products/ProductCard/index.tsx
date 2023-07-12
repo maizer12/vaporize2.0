@@ -9,6 +9,7 @@ import ICart from '../../../types/ICart'
 import BuyButton from '../../UI/Buttons/BuyButton'
 import './ProductCard.scss'
 import { clearScroll } from '../../../assets/helpers/clearScroll'
+import { setBasketAdd } from '../../../store/slice/basketSlice'
 function tc(a: string) {
 	if (a === 'NEW') {
 		return 'radial-gradient(131.25% 131.25% at 50.68% 131.25%, #461E4D 0%, #92499E 100%),linear-gradient(0deg, #C4C4C4, #C4C4C4)'
@@ -26,8 +27,8 @@ type IProps = {
 const ProductCard = ({ cartElement, indx, open }: IProps) => {
 	const [filterActive, setFilterActive] = useState<number[]>([0])
 	const massiveFavorite = AppSelector(state => state.favoriteSlice.favoritesDB)
-	const reviewsSum = cartElement.reviews.length
 	const dispatch = AppDispatch()
+	const reviewsSum = cartElement.reviews.length
 	const [rating, setRating] = useState(0)
 	const handleRating = (rate: number) => {
 		setRating(rate)
@@ -36,17 +37,16 @@ const ProductCard = ({ cartElement, indx, open }: IProps) => {
 		setFilterActive([...filterActive].concat([indx]))
 		dispatch(setFavoritesDB(massiveFavorite.concat([element])))
 	}
-	const handleClick: MouseEventHandler<HTMLButtonElement> = event => {
-		event.preventDefault()
-		// Додатковий код обробки події
+	const addBasket: MouseEventHandler<HTMLButtonElement> = e => {
+		dispatch(setBasketAdd(cartElement))
+		e.preventDefault()
 	}
-
+	const openCheck: string = indx === open ? 'active-product-card' : ''
 	return (
 		<>
 			<Link
 				to={`/product/${cartElement.id}`}
-				onClick={clearScroll}
-				className={`product-card ${indx === open ? 'active-product-card' : ''}`}
+				className={`product-card ${openCheck}`}
 			>
 				<div className='product-card__img'>
 					<div className='product-card__type'>
@@ -80,7 +80,7 @@ const ProductCard = ({ cartElement, indx, open }: IProps) => {
 					<p className='product-card__status'>в наявності</p>
 				</div>
 				<div className={`product-card-bottom ${indx === open ? 'active' : ''}`}>
-					<button onClick={handleClick}>
+					<button onClick={addBasket}>
 						<BuyButton svg={true} width={141}>
 							в кошик
 						</BuyButton>

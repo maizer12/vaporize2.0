@@ -1,12 +1,12 @@
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import ReviewsButton from '../../components/UI/Buttons/ReviewsButton'
 import Button from '../../components/UI/Buttons/BuyButton'
-import './basket.Module.scss'
 import BasketItems from '../../components/Basket/BasketItems/inde'
 import { AppSelector } from '../../hooks'
 import { Link } from 'react-router-dom'
+import './basket.Module.scss'
 const PageBasket = () => {
-	const BasketDB = AppSelector(state => state.cartSlice.BasketDBState)
+	const BasketDB = AppSelector(state => state.basketSlice.basket)
 	const breadcrumbs = [
 		'Головна',
 		'Електронні сигарети',

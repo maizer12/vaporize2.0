@@ -13,8 +13,16 @@ const initialState: IState = {
 const basketSlice = createSlice({
 	name: 'basket',
 	initialState,
-	reducers: {},
+	reducers: {
+		setBasketAdd(state, action) {
+			const newID = state.basket.length + 1
+			state.basket = [...state.basket, { ...action.payload, id: newID }]
+		},
+		setBasketRemove(state, action) {
+			state.basket = [...state.basket.filter(e => e.id !== action.payload)]
+		},
+	},
 })
 
-export const {} = basketSlice.actions
+export const { setBasketAdd, setBasketRemove } = basketSlice.actions
 export default basketSlice.reducer

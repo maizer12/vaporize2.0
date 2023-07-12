@@ -2,14 +2,19 @@ import { useState } from 'react'
 import ICart from '../../../types/ICart'
 import CalkulatorBasket from '../../../components/Calkulator/calkulatorBasket'
 import Cashback from '../../../components/UI/Cashback'
+import { AppDispatch } from '../../../hooks'
+import { setBasketRemove } from '../../../store/slice/basketSlice'
 type IProps = {
 	elem: ICart
 	i: number
 }
 
 function BasketItem({ elem, i }: IProps) {
+	const dispatch = AppDispatch()
 	const [amountIndex, setAmountIndex] = useState({ sum: 1, index: 2, type: '' })
-
+	const removeBasket = () => {
+		dispatch(setBasketRemove(elem.id))
+	}
 	return (
 		<li className='basket-items__item'>
 			<div className='basket-items__left'>
@@ -31,7 +36,7 @@ function BasketItem({ elem, i }: IProps) {
 			/>
 			<Cashback num={elem.cashback} />
 			<h4 className='basket-items__price'>{elem.price}$</h4>
-			<button className='basket-items__btn'>
+			<button className='basket-items__btn' onClick={removeBasket}>
 				<svg
 					width='24'
 					height='24'
