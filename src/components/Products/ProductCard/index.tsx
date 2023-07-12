@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, MouseEventHandler } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import LikeSetting from '../../UI/LikeSetting'
 import { setCartAdd } from '../../../store/slice/cartSlice'
@@ -36,6 +36,11 @@ const ProductCard = ({ cartElement, indx, open }: IProps) => {
 		setFilterActive([...filterActive].concat([indx]))
 		dispatch(setFavoritesDB(massiveFavorite.concat([element])))
 	}
+	const handleClick: MouseEventHandler<HTMLButtonElement> = event => {
+		event.preventDefault()
+		// Додатковий код обробки події
+	}
+
 	return (
 		<>
 			<Link
@@ -75,11 +80,11 @@ const ProductCard = ({ cartElement, indx, open }: IProps) => {
 					<p className='product-card__status'>в наявності</p>
 				</div>
 				<div className={`product-card-bottom ${indx === open ? 'active' : ''}`}>
-					<Link to={`/product/${cartElement.id}`} onClick={clearScroll}>
+					<button onClick={handleClick}>
 						<BuyButton svg={true} width={141}>
 							в кошик
 						</BuyButton>
-					</Link>
+					</button>
 					<div
 						onClick={() => addFavorite(cartElement)}
 						className='product-card-bottom__icons'

@@ -14,6 +14,7 @@ import Authorization from '../Authorization/Authorization'
 const Header = () => {
 	const [loginOpen, setLoginOpen] = useState(false)
 	const loginUser = AppSelector(state => state.auntificationSlice.userLogin)
+
 	return (
 		<>
 			<header className='header'>

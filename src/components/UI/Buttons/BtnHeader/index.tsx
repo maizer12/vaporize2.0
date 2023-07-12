@@ -1,41 +1,23 @@
 import './BtnHeader.scss'
 import { Link } from 'react-router-dom'
 type IProps = {
-	setActivePagination: React.Dispatch<React.SetStateAction<number>>
-	activePagination: number
-	i: number
 	name: string
 	path: string
 	url: string
 	sum: number
 }
 
-function BtnHeader({
-	setActivePagination,
-	activePagination,
-	i,
-	name,
-	path,
-	url,
-	sum,
-}: IProps) {
+function BtnHeader({ name, path, url, sum }: IProps) {
 	return (
-		<Link
-			to={path}
-			onClick={() => setActivePagination(i)}
-			key={name}
-			className={`header-btn ${
-				activePagination === i ? 'header-btn__active' : ''
-			}`}
-		>
+		<Link to={path} className='header-btn '>
 			<div className='header-btn__icon'>
 				<span
 					className='header-btn__sum'
-					style={{ display: sum > 0 ? '' : 'none' }}
+					style={{ display: sum ? '' : 'none' }}
 				>
-					{name}
+					{sum}
 				</span>
-				<img src={url} alt='btn-icon' />
+				<img src={url} alt='button icon' />
 			</div>
 			<p className='header-btn__desc'>{name}</p>
 		</Link>

@@ -1,20 +1,22 @@
-import { useState } from 'react'
 import { headerButtons } from '../const'
 import BtnHeader from '../../UI/Buttons/BtnHeader'
+import { AppSelector } from '../../../hooks'
 
 const HeaderButtons = () => {
-	const [activePagination, setActivePagination] = useState<number>(100)
-	console.log(activePagination)
+	const basketSum = AppSelector(state => state.basketSlice.basket)
+	const getNumbers = (patch: string): number => {
+		if (patch == '/basket') {
+			return basketSum.length
+		}
+		if (patch == '/favorites') {
+			return 0
+		}
+		return 0
+	}
 	return (
 		<div className='header-buttons'>
-			{headerButtons.map((e, i) => (
-				<BtnHeader
-					key={e.name}
-					{...e}
-					i={i}
-					activePagination={activePagination}
-					setActivePagination={setActivePagination}
-				/>
+			{headerButtons.map(e => (
+				<BtnHeader key={e.name} {...e} sum={getNumbers(e.path)} />
 			))}
 		</div>
 	)
