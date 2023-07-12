@@ -1,9 +1,8 @@
-import React from 'react';
-import './cashback.Module.scss'
-type INum = {num?:number};
-const Cashback = ({num}:INum) => {
+import './Cashback.scss'
+type INum = { num?: number }
+const Cashback = ({ num }: INum) => {
 	return (
-		<button className='cashback'>
+		<div className='cashback'>
 			<svg
 				width='21'
 				height='21'
@@ -16,9 +15,9 @@ const Cashback = ({num}:INum) => {
 					fill='black'
 				/>
 			</svg>
-			{num? num + ' кешбек' : '10 кешбек'} 
-		</button>
+			{num ? num + ' кешбек' : '10 кешбек'}
+		</div>
 	)
-};
+}
 
-export default Cashback;
+export default Cashback

@@ -1,6 +1,6 @@
 [
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -22,7 +22,7 @@
 		"id": 0
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/2.jpg",
 			"/img/products/3.jpg",
@@ -45,7 +45,7 @@
 		"id": 1
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/5.jpg",
 			"/img/products/3.jpg",
@@ -62,7 +62,7 @@
 		"id": 2
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/6.jpg",
 			"/img/products/4.jpg",
@@ -79,7 +79,7 @@
 		"id": 3
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/7.jpg",
 			"/img/products/3.jpg",

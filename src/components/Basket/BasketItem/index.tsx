@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ICart from '../../../types/ICart'
-import CalkulatorBasket from '../../../components/Calkulator/calkulatorBasket'
+//import CalkulatorBasket from '../../../components/Calkulator/calkulatorBasket'
 import Cashback from '../../../components/UI/Cashback'
 import { AppDispatch } from '../../../hooks'
-import { setBasketRemove } from '../../../store/slice/basketSlice'
+import {
+	setBasketAmount,
+	setBasketRemove,
+} from '../../../store/slice/basketSlice'
+import './BasketItem.scss'
+import Calculator from '../../UI/Сalculator/inde'
 type IProps = {
 	elem: ICart
 	i: number
@@ -11,32 +16,35 @@ type IProps = {
 
 function BasketItem({ elem, i }: IProps) {
 	const dispatch = AppDispatch()
-	const [amountIndex, setAmountIndex] = useState({ sum: 1, index: 2, type: '' })
+	const [amount, setAmount] = useState<number>(elem.amount)
+	const price: number = Math.floor(
+		elem.amount >= 2 ? elem.price / elem.amount : elem.price
+	)
 	const removeBasket = () => {
 		dispatch(setBasketRemove(elem.id))
 	}
+	useEffect(() => {
+		const newPrice = Math.floor(amount * price)
+		const newElem = { ...elem, amount, price: newPrice }
+		dispatch(setBasketAmount({ id: elem.id, elem: newElem }))
+	}, [amount])
 	return (
-		<li className='basket-items__item'>
-			<div className='basket-items__left'>
+		<li className='basket-item'>
+			<div className='basket-item__left'>
 				<img width={103} height={112} src={elem.image[0]} alt='product' />
-				<div className='basket-items__desc'>
-					<h5 className='basket-items__name'>{elem.name}</h5>
-					<div className='basket-items__tags'>
-						<span className='basket-items__status'></span>
-						<p className='basket-items__tag'>Середній</p>
-						<p className='basket-items__tag'>М'ята</p>
+				<div className='basket-item__desc'>
+					<h5 className='basket-item__name'>{elem.name}</h5>
+					<div className='basket-item__tags'>
+						<span className='basket-item__status'></span>
+						<p className='basket-item__tag'>Середній</p>
+						<p className='basket-item__tag'>М'ята</p>
 					</div>
 				</div>
 			</div>
-			<CalkulatorBasket
-				index={i}
-				setAmountIndex={setAmountIndex}
-				type={amountIndex.type}
-				amountMassive={elem.amount}
-			/>
+			<Calculator amount={amount} setAmount={setAmount} />
 			<Cashback num={elem.cashback} />
-			<h4 className='basket-items__price'>{elem.price}$</h4>
-			<button className='basket-items__btn' onClick={removeBasket}>
+			<h4 className='basket-item__price'>{elem.price}$</h4>
+			<button className='basket-item__btn' onClick={removeBasket}>
 				<svg
 					width='24'
 					height='24'

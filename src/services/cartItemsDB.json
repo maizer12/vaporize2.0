@@ -1,6 +1,6 @@
 [
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -22,7 +22,7 @@
 		"id": 0
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/2.jpg",
 			"/img/products/3.jpg",
@@ -45,7 +45,7 @@
 		"id": 1
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/5.jpg",
 			"/img/products/3.jpg",
@@ -62,7 +62,7 @@
 		"id": 2
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/6.jpg",
 			"/img/products/4.jpg",
@@ -79,7 +79,7 @@
 		"id": 3
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/7.jpg",
 			"/img/products/3.jpg",
@@ -96,7 +96,7 @@
 		"id": 4
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -113,7 +113,7 @@
 		"id": 5
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -130,7 +130,7 @@
 		"id": 6
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -147,7 +147,7 @@
 		"id": 7
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -164,7 +164,7 @@
 		"id": 8
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -181,7 +181,7 @@
 		"id": 9
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -198,7 +198,7 @@
 		"id": 10
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -215,7 +215,7 @@
 		"id": 11
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -232,7 +232,7 @@
 		"id": 12
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -249,7 +249,7 @@
 		"id": 13
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
@@ -266,7 +266,7 @@
 		"id": 14
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/4.jpg",
@@ -283,7 +283,7 @@
 		"id": 15
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -300,7 +300,7 @@
 		"id": 16
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/4.jpg",
@@ -317,7 +317,7 @@
 		"id": 17
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/1.jpg",
 			"/img/products/3.jpg",
@@ -334,7 +334,7 @@
 		"id": 18
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/2.jpg",
 			"/img/products/3.jpg",
@@ -351,7 +351,7 @@
 		"id": 19
 	},
 	{
-		"amount": 0,
+		"amount": 1,
 		"image": [
 			"/img/products/4.jpg",
 			"/img/products/1.jpg",
