@@ -9,7 +9,7 @@ import BuePagination from '../../components/UI/Pagination/BuePagination'
 
 import './PageProduct.scss'
 import OpenProduct from '../../components/OpenProduct'
-import { clearScroll } from '../../assets/helpers/clearScroll'
+import { clearScroll } from '../../helpers/clearScroll'
 const PageProduct = () => {
 	const breadcrumbs = [
 		'Головна',

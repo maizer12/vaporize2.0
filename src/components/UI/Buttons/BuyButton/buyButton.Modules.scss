@@ -14,9 +14,10 @@
 	column-gap: 14px;
 	justify-content: center;
 	transition: 0.7s;
-	position: relative;	
-    cursor: pointer;
-    &:hover{
-        background-color: #7f308d;
-    }
+	position: relative;
+	text-transform: uppercase;
+	cursor: pointer;
+	&:hover {
+		background-color: #7f308d;
+	}
 }

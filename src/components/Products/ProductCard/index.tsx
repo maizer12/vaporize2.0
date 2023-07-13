@@ -8,7 +8,7 @@ import { setFavoritesDB } from '../../../store/slice/favoriteSlice'
 import ICart from '../../../types/ICart'
 import BuyButton from '../../UI/Buttons/BuyButton'
 import './ProductCard.scss'
-import { clearScroll } from '../../../assets/helpers/clearScroll'
+import { clearScroll } from '../../../helpers/clearScroll'
 import { setBasketAdd } from '../../../store/slice/basketSlice'
 function tc(a: string) {
 	if (a === 'NEW') {

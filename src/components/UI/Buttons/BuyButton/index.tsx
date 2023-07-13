@@ -1,11 +1,11 @@
-import React, { ReactChild } from 'react';
-import './buyButton.Module.scss'
-interface IProps{
-	width:number,
+import React, { ReactChild } from 'react'
+import './buyButton.Modules.scss'
+interface IProps {
+	width: number
 	children: ReactChild | React.ReactNode
-	svg?:boolean
+	svg?: boolean
 }
-const BuyButton = ({width,  children, svg }:IProps) => {
+const BuyButton = ({ width, children, svg }: IProps) => {
 	return (
 		<div style={{ width: width }} className='buy-button'>
 			<svg
@@ -21,9 +21,9 @@ const BuyButton = ({width,  children, svg }:IProps) => {
 					fill='white'
 				/>
 			</svg>
-			{children} 
+			{children}
 		</div>
 	)
-};
+}
 
-export default BuyButton;
+export default BuyButton

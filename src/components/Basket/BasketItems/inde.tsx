@@ -43,7 +43,7 @@ function BasketItems({ BasketDB }: IProps) {
 	return (
 		<ul className='basket-items'>
 			{BasketDB.map((e, i) => (
-				<BasketItem key={e.id} elem={e} i={i} />
+				<BasketItem key={e.id} elem={e} />
 			))}
 		</ul>
 	)

@@ -1,0 +1,32 @@
+.empty-state {
+	min-height: 600px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	&__img {
+		width: 170px;
+		margin-bottom: 11px;
+	}
+	&__title {
+		color: #000;
+		text-align: center;
+		font-family: Raleway;
+		font-size: 24px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		margin-bottom: 16px;
+	}
+	&__desc {
+		color: #747474;
+		text-align: center;
+		font-family: Raleway;
+		font-size: 17px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: normal;
+		max-width: 437px;
+		margin-bottom: 41px;
+	}
+}

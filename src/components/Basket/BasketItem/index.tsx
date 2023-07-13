@@ -9,17 +9,15 @@ import {
 } from '../../../store/slice/basketSlice'
 import './BasketItem.scss'
 import Calculator from '../../UI/Сalculator/inde'
+import { getNewPrice } from '../../../helpers/getNewPrice'
 type IProps = {
 	elem: ICart
-	i: number
 }
 
-function BasketItem({ elem, i }: IProps) {
+function BasketItem({ elem }: IProps) {
 	const dispatch = AppDispatch()
 	const [amount, setAmount] = useState<number>(elem.amount)
-	const price: number = Math.floor(
-		elem.amount >= 2 ? elem.price / elem.amount : elem.price
-	)
+	const price: number = getNewPrice(elem.amount, elem.price)
 	const removeBasket = () => {
 		dispatch(setBasketRemove(elem.id))
 	}
