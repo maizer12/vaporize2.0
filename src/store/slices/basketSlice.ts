@@ -3,11 +3,11 @@ import BasketDb from '../../services/basket.json'
 import ICart from '../../types/ICart'
 
 type IState = {
-	basket: ICart[]
+	basketItems: ICart[]
 }
 
 const initialState: IState = {
-	basket: BasketDb,
+	basketItems: BasketDb,
 }
 
 const basketSlice = createSlice({
@@ -15,15 +15,20 @@ const basketSlice = createSlice({
 	initialState,
 	reducers: {
 		setBasketAdd(state, action) {
-			const newID = state.basket.length + 1
-			state.basket = [...state.basket, { ...action.payload, id: newID }]
+			const newID = state.basketItems.length + 1
+			state.basketItems = [
+				...state.basketItems,
+				{ ...action.payload, id: newID },
+			]
 		},
 		setBasketRemove(state, action) {
-			state.basket = [...state.basket.filter(e => e.id !== action.payload)]
+			state.basketItems = [
+				...state.basketItems.filter(e => e.id !== action.payload),
+			]
 		},
 		setBasketAmount(state, action) {
-			state.basket = [
-				...state.basket.map(e =>
+			state.basketItems = [
+				...state.basketItems.map(e =>
 					e.id === action.payload.id ? action.payload.elem : e
 				),
 			]

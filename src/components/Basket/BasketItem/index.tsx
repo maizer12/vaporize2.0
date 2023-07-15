@@ -6,7 +6,7 @@ import { AppDispatch } from '../../../hooks'
 import {
 	setBasketAmount,
 	setBasketRemove,
-} from '../../../store/slice/basketSlice'
+} from '../../../store/slices/basketSlice'
 import './BasketItem.scss'
 import Calculator from '../../UI/Сalculator/inde'
 import { getNewPrice } from '../../../helpers/getNewPrice'

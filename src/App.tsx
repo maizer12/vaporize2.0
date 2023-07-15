@@ -12,7 +12,7 @@ import PageBlog from './pages/PageBlog'
 import DeliveryDispatch from './pages/PageDeliveryDispatch'
 import PageFaq from './pages/PageFaq'
 import PageContact from './pages/PageContact'
-import PageFavorites from './pages/PageFavorites'
+import PageFavorites from './pages/PageFavorite'
 function App() {
 	return (
 		<>

@@ -6,8 +6,9 @@ import { AppSelector } from '../../hooks'
 import { Link } from 'react-router-dom'
 import './basket.Module.scss'
 import EmptyState from '../../components/UI/EmptyState'
+import { emptyBasket } from './consts'
 const PageBasket = () => {
-	const BasketDB = AppSelector(state => state.basketSlice.basket)
+	const BasketDB = AppSelector(state => state.basketSlice.basketItems)
 	const breadcrumbs = [
 		'Головна',
 		'Електронні сигарети',
@@ -54,7 +55,7 @@ const PageBasket = () => {
 					</section>
 				</>
 			) : (
-				<EmptyState />
+				<EmptyState {...emptyBasket} />
 			)}
 		</main>
 	)

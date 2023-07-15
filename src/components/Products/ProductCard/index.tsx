@@ -1,15 +1,16 @@
 import { useState, MouseEventHandler } from 'react'
 import { Rating } from 'react-simple-star-rating'
 import LikeSetting from '../../UI/LikeSetting'
-import { setCartAdd } from '../../../store/slice/cartSlice'
 import { Link } from 'react-router-dom'
 import { AppDispatch, AppSelector } from '../../../hooks'
-import { setFavoritesDB } from '../../../store/slice/favoriteSlice'
 import ICart from '../../../types/ICart'
 import BuyButton from '../../UI/Buttons/BuyButton'
 import './ProductCard.scss'
-import { clearScroll } from '../../../helpers/clearScroll'
-import { setBasketAdd } from '../../../store/slice/basketSlice'
+import { setBasketAdd } from '../../../store/slices/basketSlice'
+import {
+	setFavoriteAdd,
+	setFavoriteRemove,
+} from '../../../store/slices/favoriteSlice'
 function tc(a: string) {
 	if (a === 'NEW') {
 		return 'radial-gradient(131.25% 131.25% at 50.68% 131.25%, #461E4D 0%, #92499E 100%),linear-gradient(0deg, #C4C4C4, #C4C4C4)'
@@ -25,17 +26,21 @@ type IProps = {
 	open: number
 }
 const ProductCard = ({ cartElement, indx, open }: IProps) => {
-	const [filterActive, setFilterActive] = useState<number[]>([0])
-	const massiveFavorite = AppSelector(state => state.favoriteSlice.favoritesDB)
+	const favorites = AppSelector(state => state.favoriteSlice.favoriteItems)
+	const checkFavorite = Boolean(favorites.find(e => e.id === cartElement.id))
 	const dispatch = AppDispatch()
 	const reviewsSum = cartElement.reviews.length
 	const [rating, setRating] = useState(0)
 	const handleRating = (rate: number) => {
 		setRating(rate)
 	}
-	const addFavorite = (element: ICart) => {
-		setFilterActive([...filterActive].concat([indx]))
-		dispatch(setFavoritesDB(massiveFavorite.concat([element])))
+	const addFavorite: MouseEventHandler<HTMLButtonElement> = e => {
+		e.preventDefault()
+		if (checkFavorite) {
+			dispatch(setFavoriteRemove(cartElement.id))
+		} else {
+			dispatch(setFavoriteAdd(cartElement))
+		}
 	}
 	const addBasket: MouseEventHandler<HTMLButtonElement> = e => {
 		dispatch(setBasketAdd(cartElement))
@@ -85,14 +90,9 @@ const ProductCard = ({ cartElement, indx, open }: IProps) => {
 							в кошик
 						</BuyButton>
 					</button>
-					<div
-						onClick={() => addFavorite(cartElement)}
-						className='product-card-bottom__icons'
-					>
-						<LikeSetting
-							active={filterActive.filter(e => e === indx).length === 1}
-						/>
-					</div>
+					<button onClick={addFavorite} className='product-card-bottom__icons'>
+						<LikeSetting active={checkFavorite} />
+					</button>
 				</div>
 			</Link>
 		</>

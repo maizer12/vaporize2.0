@@ -2,15 +2,16 @@ import React from 'react'
 import BuyButton from '../Buttons/BuyButton'
 import { Link } from 'react-router-dom'
 import './EmptyState.scss'
-function EmptyState() {
+type IProps = {
+	title: string
+	desc: string
+}
+function EmptyState({ title, desc }: IProps) {
 	return (
 		<section className='empty-state'>
 			<img src='/img/basket.jpg' alt='smile' className='empty-state__img' />
-			<h4 className='empty-state__title'>У вас немає замовлень</h4>
-			<p className='empty-state__desc'>
-				Оформіть хоча б одне замовлення та отримайте доступ до найкращих
-				продуктів, які наша корзинка має пропонувати.
-			</p>
+			<h4 className='empty-state__title'>{title}</h4>
+			<p className='empty-state__desc'>{desc}</p>
 			<Link to='/'>
 				<BuyButton width={149}>
 					<svg

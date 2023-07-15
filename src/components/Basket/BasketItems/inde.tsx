@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useState } from 'react'
 import './BasketItems.scss'
 import ICart from '../../../types/ICart'
 import { AppDispatch } from '../../../hooks'
-import { setBasketDB } from '../../../store/slice/cartSlice'
+import { setBasketDB } from '../../../store/slices/cartSlice'
 import BasketItem from '../BasketItem'
 
 type IProps = {
