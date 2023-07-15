@@ -1,4 +1,3 @@
-import React, { useState } from 'react'
 import './listHeader.Module.scss'
 type IProps = {
 	setRowColumn: React.Dispatch<React.SetStateAction<boolean>>

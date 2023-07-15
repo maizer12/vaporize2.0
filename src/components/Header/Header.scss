@@ -21,17 +21,19 @@
 .header__link,
 .menu__link {
 	color: #747474;
-	background: none;
 	font-family: Raleway;
 	font-size: 14px;
-	font-weight: 400;
-	line-height: 1.2;
-	text-align: left;
-	transition: 0.7s;
-	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+	transition: 0.6s;
+	background: none;
 	&:hover {
 		color: black;
 	}
+}
+.active-menu {
+	color: black;
 }
 .language {
 	&__btn {

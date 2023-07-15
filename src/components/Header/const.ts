@@ -30,9 +30,9 @@ export const headerButtons: IHeaderButtons[] = [
 export const navigationLinks: ILink[] = [
 	{ name: 'Каталог товарів', path: '/' },
 	{ name: 'Акції', path: '/catalog' },
-	{ name: 'Популярне ', path: '/catalog' },
-	{ name: 'Рod системи', path: '/catalog' },
-	{ name: 'Одноразові', path: '/catalog' },
-	{ name: 'Рідини ', path: '/catalog' },
+	{ name: 'Популярне ', path: '' },
+	{ name: 'Рod системи', path: '' },
+	{ name: 'Одноразові', path: '' },
+	{ name: 'Рідини ', path: '' },
 	{ name: 'Блог', path: '/blog' },
 ]

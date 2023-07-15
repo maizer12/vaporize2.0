@@ -14,14 +14,6 @@
 		align-items: center;
 		transition: 0.6s;
 	}
-	&__active {
-		.navigation-buttons__icon {
-			box-shadow: 0 0 10px #ac2424;
-		}
-		p {
-			color: #ac2424;
-		}
-	}
 	&__desc {
 		margin-top: 6px;
 		font-size: 12px;
@@ -66,5 +58,13 @@
 		.header-btn__desc {
 			color: #df3616;
 		}
+	}
+}
+.header-btn-active {
+	.header-btn__icon {
+		border-color: #df3616;
+	}
+	.header-btn__desc {
+		color: #df3616;
 	}
 }

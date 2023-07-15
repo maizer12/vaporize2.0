@@ -1,5 +1,5 @@
 import './BtnHeader.scss'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 type IProps = {
 	name: string
 	path: string
@@ -8,8 +8,14 @@ type IProps = {
 }
 
 function BtnHeader({ name, path, url, sum }: IProps) {
+	const navigate = useLocation()
 	return (
-		<Link to={path} className='header-btn '>
+		<Link
+			to={path}
+			className={`header-btn ${
+				navigate.pathname === path ? 'header-btn-active' : ''
+			}`}
+		>
 			<div className='header-btn__icon'>
 				<span
 					className='header-btn__sum'

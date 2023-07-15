@@ -6,10 +6,10 @@ const HeaderButtons = () => {
 	const basketSum = AppSelector(state => state.basketSlice.basketItems)
 	const favoriteSum = AppSelector(state => state.favoriteSlice.favoriteItems)
 	const getNumbers = (patch: string): number => {
-		if (patch == '/basket') {
+		if (patch === '/basket') {
 			return basketSum.length
 		}
-		if (patch == '/favorites') {
+		if (patch === '/favorites') {
 			return favoriteSum.length
 		}
 		return 0

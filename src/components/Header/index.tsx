@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import { AppSelector } from '../../hooks'
 import { headerMenu } from './const'
 import './Header.scss'
@@ -12,6 +12,7 @@ import HeaderButtons from './HeaderButtons'
 import Authorization from '../Authorization/Authorization'
 
 const Header = () => {
+	const patch = useLocation()
 	const [loginOpen, setLoginOpen] = useState(false)
 	const loginUser = AppSelector(state => state.auntificationSlice.userLogin)
 
@@ -22,7 +23,13 @@ const Header = () => {
 					<div className='header__content container'>
 						<nav className='menu'>
 							{headerMenu.map(e => (
-								<Link key={e.name} to={e.path} className='menu__link'>
+								<Link
+									key={e.name}
+									to={e.path}
+									className={`menu__link ${
+										patch.pathname === e.path ? 'active-menu' : ''
+									}`}
+								>
 									{e.name}
 								</Link>
 							))}
