@@ -13,6 +13,7 @@ import DeliveryDispatch from './pages/PageDeliveryDispatch'
 import PageFaq from './pages/PageFaq'
 import PageContact from './pages/PageContact'
 import PageFavorites from './pages/PageFavorite'
+import PageNotFound from './pages/PageNotFound'
 function App() {
 	return (
 		<>
@@ -29,6 +30,7 @@ function App() {
 					<Route path='/faq' element={<PageFaq />} />
 					<Route path='/contact' element={<PageContact />} />
 					<Route path='/favorites' element={<PageFavorites />} />
+					<Route path='*' element={<PageNotFound />} />
 				</Routes>
 			}
 			<Footer />
