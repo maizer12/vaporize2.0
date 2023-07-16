@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react'
 import ICart from '../../../types/ICart'
-//import CalkulatorBasket from '../../../components/Calkulator/calkulatorBasket'
 import Cashback from '../../../components/UI/Cashback'
 import { AppDispatch } from '../../../hooks'
 import {

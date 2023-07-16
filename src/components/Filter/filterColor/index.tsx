@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './filterColor.Module.scss'
+import './filterColor.scss'
 const FilterColor = () => {
 	const [num, setNum] = useState<number>(0)
 	const [color, setColor] = useState<string[]>([

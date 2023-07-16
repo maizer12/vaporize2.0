@@ -13,10 +13,10 @@ function OpenProduct() {
 	const product: ICart = ProductDb[Number(productId)]
 	return (
 		<div className='open-product'>
-			<h2 className='open-product__title'></h2>
+			<h2 className='open-product__title'>{product.name}</h2>
 			<section className='bue-box'>
 				<BueBoxImage product={product} />
-				<BueBoxContent product={product} setPopupSwitch={setPopupSwitch} />
+				<BueBoxContent item={product} setPopupSwitch={setPopupSwitch} />
 			</section>
 			{popupSwitch ? <PopupBue setPopupSwitch={setPopupSwitch} /> : ''}
 		</div>

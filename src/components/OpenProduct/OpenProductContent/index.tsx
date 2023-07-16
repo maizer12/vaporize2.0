@@ -5,47 +5,28 @@ import FilterColor from '../../Filter/filterColor'
 import FilterTeg from '../../Filter/filterTeg'
 import Buttons from '../../UI/Buttons/BuyButton'
 import Cashback from '../../UI/Cashback'
-import { AppDispatch, AppSelector } from '../../../hooks'
-import { setBasketDB } from '../../../store/slices/cartSlice'
-import CalkulatorBue from '../../Calkulator/calkulatorBue'
-import './OpenProductContent.scss'
+import { AppDispatch } from '../../../hooks'
+import { strength, taste } from '../constns'
+import Calculator from '../../UI/Сalculator/inde'
 import ICart from '../../../types/ICart'
+import { setBasketAdd } from '../../../store/slices/basketSlice'
+import './OpenProductContent.scss'
 type IProps = {
 	setPopupSwitch: React.Dispatch<React.SetStateAction<boolean>>
-	product: ICart
+	item: ICart
 }
-const OpenProductContent = ({ setPopupSwitch, product }: IProps) => {
-	const basketDB = AppSelector(state => state.cartSlice.BasketDBState)
-	const dispath = AppDispatch()
-	const [sumElement, setSumElement] = useState(1)
-	const [rating, setRating] = useState(0)
-	const cartBueCart = AppSelector(state => state.cartSlice.cartBue)
-	const itemVan: string[] = ['Легкий', 'Середній', 'Важкий']
-	const itemTo: string[] = [
-		'Лимон',
-		"М'ята",
-		'Чорниця',
-		'Ваніль',
-		'Киви',
-		'Сладкий',
-		'Середній',
-		'Важкий',
-	]
-	const handleRating = (rate: number) => {
-		setRating(rate)
-	}
+const OpenProductContent = ({ setPopupSwitch, item }: IProps) => {
+	const dispatch = AppDispatch()
+	const [amount, setAmount] = useState(1)
 	const addBasket = () => {
-		const basket = basketDB
-		const priceProduct = cartBueCart.price * sumElement
 		const newProduct = {
-			...cartBueCart,
-			amount: sumElement,
-			price: priceProduct,
+			...item,
+			amount,
+			price: amount * item.price,
 		}
-		console.log(newProduct)
-		dispath(setBasketDB(basket.concat([newProduct])))
-		setPopupSwitch(true)
+		dispatch(setBasketAdd(newProduct))
 	}
+
 	return (
 		<div className='bue-content'>
 			<div className='bue-content__header'>
@@ -53,13 +34,12 @@ const OpenProductContent = ({ setPopupSwitch, product }: IProps) => {
 				<LikeSetting active={false} />
 			</div>
 			<div className='bue-content__rating'>
-				<p className='bue-content__reviews'>
-					{cartBueCart.reviews.length} відгуків
-				</p>
+				<p className='bue-content__reviews'>{item.reviews.length} відгуків</p>
 				<Rating
-					onClick={handleRating}
-					initialValue={4}
-					ratingValue={rating}
+					initialValue={item.star}
+					ratingValue={0}
+					fillColor='#F2CB40'
+					readonly={true}
 					size={20}
 				/>
 			</div>
@@ -92,18 +72,14 @@ const OpenProductContent = ({ setPopupSwitch, product }: IProps) => {
 				</button>
 			</div>
 			<FilterColor />
-			<FilterTeg name={'Міцність'} items={itemVan} />
-			<FilterTeg name={'Смак'} items={itemTo} />
+			<FilterTeg name={'Міцність'} items={strength} />
+			<FilterTeg name={'Смак'} items={taste} />
 			<div className='bue-content__num-price'>
-				<CalkulatorBue sumElement={sumElement} setSumElement={setSumElement} />
+				<Calculator amount={amount} setAmount={setAmount} />
 				<div className='bue-content__left-item'>
 					<div className='bue-content__price-sale'>
-						<p className='bue-content__sale'>
-							{sumElement * cartBueCart.sale} ₴
-						</p>
-						<h6 className='bue-content__price'>
-							{sumElement * cartBueCart.price} ₴
-						</h6>
+						<p className='bue-content__sale'>{amount * item.sale} ₴</p>
+						<h6 className='bue-content__price'>{amount * item.price} ₴</h6>
 					</div>
 					<Cashback />
 				</div>
