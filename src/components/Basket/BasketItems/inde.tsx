@@ -21,21 +21,21 @@ function BasketItems({ BasketDB }: IProps) {
 		}
 		return (b / sum) * (sum - 1)
 	}
-	useEffect(() => {
-		function changeElement() {
-			const newOb = {
-				...BasketDB.filter((e, i) => i === amountIndex.index)[0],
-				amount: amountIndex.sum - 1,
-				price: test(amountIndex.sum, BasketDB[amountIndex.index].price),
-			}
-			dispatch(
-				setBasketDB(
-					BasketDB.map((e, i) => (i === amountIndex.index ? newOb : e))
-				)
-			)
-		}
-		changeElement()
-	}, [amountIndex])
+	// useEffect(() => {
+	// 	function changeElement() {
+	// 		const newOb = {
+	// 			...BasketDB.filter((e, i) => i === amountIndex.index)[0],
+	// 			amount: amountIndex.sum - 1,
+	// 			price: test(amountIndex.sum, BasketDB[amountIndex.index].price),
+	// 		}
+	// 		dispatch(
+	// 			setBasketDB(
+	// 				BasketDB.map((e, i) => (i === amountIndex.index ? newOb : e))
+	// 			)
+	// 		)
+	// 	}
+	// 	changeElement()
+	// }, [amountIndex])
 
 	const deletElements = (index: number) => {
 		dispatch(setBasketDB(BasketDB.filter((e, i) => i !== index)))

@@ -24,16 +24,16 @@ function EmptyState({ title, desc }: IProps) {
 						<path
 							d='M15.3555 7L1.64118 7'
 							stroke='white'
-							stroke-width='2'
-							stroke-linecap='round'
-							stroke-linejoin='round'
+							strokeWidth='2'
+							strokeLinecap='round'
+							strokeLinejoin='round'
 						/>
 						<path
 							d='M7.64062 13L1.64063 7L7.64063 1'
 							stroke='white'
-							stroke-width='2'
-							stroke-linecap='round'
-							stroke-linejoin='round'
+							strokeWidth='2'
+							strokeLinecap='round'
+							strokeLinejoin='round'
 						/>
 					</svg>
 					повернутися

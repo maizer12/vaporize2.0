@@ -1,13 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
-import BasketDb from '../../services/basket.json'
 import ICart from '../../types/ICart'
 
 type IState = {
 	basketItems: ICart[]
 }
-
+const basketItemsLocalStorage = localStorage.getItem('Basket')
 const initialState: IState = {
-	basketItems: BasketDb,
+	basketItems: basketItemsLocalStorage
+		? JSON.parse(basketItemsLocalStorage)
+		: [],
 }
 
 const basketSlice = createSlice({

@@ -1,5 +1,5 @@
 import './assets/style/main.scss'
-import { useState } from 'react'
+import { useEffect } from 'react'
 import Footer from './components/Footer'
 import Header from './components/Header'
 import PageHome from './pages/PageHome'
@@ -14,7 +14,16 @@ import PageFaq from './pages/PageFaq'
 import PageContact from './pages/PageContact'
 import PageFavorites from './pages/PageFavorite'
 import PageNotFound from './pages/PageNotFound'
+import { AppSelector } from './hooks'
 function App() {
+	const basketItems = AppSelector(state => state.basketSlice.basketItems)
+	const favoriteItems = AppSelector(state => state.favoriteSlice.favoriteItems)
+	useEffect(() => {
+		localStorage.setItem('Basket', JSON.stringify(basketItems))
+	}, [basketItems])
+	useEffect(() => {
+		localStorage.setItem('Favorite', JSON.stringify(favoriteItems))
+	}, [favoriteItems])
 	return (
 		<>
 			<Header />

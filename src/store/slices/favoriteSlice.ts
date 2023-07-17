@@ -1,15 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit'
-import FavoritesDB from '../../services/favorites.json'
 import ICart from '../../types/ICart'
 
 type IState = {
 	favoriteItems: ICart[]
 }
+const favoriteLocalStorage = localStorage.getItem('Favorite')
 
 const initialState: IState = {
-	favoriteItems: FavoritesDB,
+	favoriteItems: favoriteLocalStorage ? JSON.parse(favoriteLocalStorage) : [],
 }
-
 const favoritesSlice = createSlice({
 	name: 'favorites',
 	initialState,
