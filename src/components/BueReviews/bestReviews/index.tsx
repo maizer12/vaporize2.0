@@ -49,7 +49,7 @@ const BestReviews = () => {
 				<BestReviewsItem />
 				<BestReviewsItem />
 			</div>
-			<CartItems item={cartDB} title={'Вас можуть зацікавити'} />
+			<CartItems title={'Вас можуть зацікавити'} />
 		</section>
 	)
 }

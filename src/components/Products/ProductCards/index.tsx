@@ -1,19 +1,25 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Cart from '../ProductCard'
 import { Navigation, A11y } from 'swiper'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import ICart from '../../../types/ICart'
 import BtnLink from '../../UI/Buttons/BtnLink'
-
 import './ProductCards.scss'
+import { AppDispatch, AppSelector } from '../../../hooks'
+import { fetchProducts } from '../../../store/slices/async/getProducts'
+import ProductSkeleton from '../ProductCard/ProductSkeleton'
 interface IProps {
 	title?: string
-	item: ICart[]
 	rowActivity?: boolean
 }
-const ProductCards = ({ title, item, rowActivity }: IProps) => {
+const ProductCards = ({ title }: IProps) => {
+	const dispatch = AppDispatch()
+	const { productItems: products, loading } = AppSelector(
+		state => state.productSlice
+	)
 	const [open, setOpen] = useState<number>(55)
-
+	useEffect(() => {
+		dispatch(fetchProducts())
+	}, [])
 	return (
 		<section className='product-cards'>
 			<div className='product-cards__header'>
@@ -29,17 +35,24 @@ const ProductCards = ({ title, item, rowActivity }: IProps) => {
 					spaceBetween={0}
 					navigation
 				>
-					{item.map((e, i) => (
-						<SwiperSlide key={i}>
-							<div
-								className='product-cards__wrapper'
-								onMouseEnter={(): void => setOpen(i)}
-								onMouseLeave={(): void => setOpen(55)}
-							>
-								<Cart open={open} indx={i} cartElement={e} />
-							</div>
-						</SwiperSlide>
-					))}
+					{!loading
+						? products.map((e, i) => (
+								<SwiperSlide key={i}>
+									<div
+										className='product-cards__wrapper'
+										onMouseEnter={(): void => setOpen(i)}
+										onMouseLeave={(): void => setOpen(55)}
+									>
+										<Cart open={open} indx={i} cartElement={e} />
+									</div>
+								</SwiperSlide>
+						  ))
+						: [...Array(6)].map((e, i) => (
+								<SwiperSlide key={i}>
+									{' '}
+									<ProductSkeleton />
+								</SwiperSlide>
+						  ))}
 				</Swiper>
 			</div>
 		</section>

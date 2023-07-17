@@ -2,18 +2,17 @@ import CartItems from '../../components/Products/ProductCards'
 import News from '../../components/News'
 import SliderHome from '../../components/UI/Slider'
 import './Home.scss'
-import CartItemsDB from '../../services/cartItemsDB.json'
 
 const PageHome = () => {
 	return (
 		<main>
 			<SliderHome />
-			<CartItems item={CartItemsDB} title={'Новинки товарів'} />
-			<CartItems item={CartItemsDB} title={'Популярні товари'} />
+			<CartItems title={'Новинки товарів'} />
+			<CartItems title={'Популярні товари'} />
 			<div className='banner'>
 				<img width={1110} height={304} src='/img/banner.jpg' alt='banner' />
 			</div>
-			<CartItems item={CartItemsDB} title={'Товари зі знижкою'} />
+			<CartItems title={'Товари зі знижкою'} />
 			<div className='home-text'>
 				<div className='home-text__img'>
 					<img width={13} height={19} src='/img/bord.svg' alt='border-icon' />

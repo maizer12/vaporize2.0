@@ -111,7 +111,7 @@ const BueDesc = () => {
 				<Kit />
 			</div>
 			<div className='bue-desc__recomnd'>
-				<CartItems item={CartDB} title={'Вас можуть зацікавити'} />
+				<CartItems title={'Вас можуть зацікавити'} />
 			</div>
 		</section>
 	)

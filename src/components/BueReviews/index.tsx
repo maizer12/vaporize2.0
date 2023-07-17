@@ -44,7 +44,7 @@ const BueReviews = () => {
 				<ReviewsItem name={'Иван'} />
 				<ReviewsItem name={'Илон'} />
 			</div>
-			<CartItems item={CartDB} title={'Вас можуть зацікавити'} />
+			<CartItems title={'Вас можуть зацікавити'} />
 		</section>
 	)
 }
