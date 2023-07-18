@@ -14,8 +14,10 @@ import PageFaq from './pages/PageFaq'
 import PageContact from './pages/PageContact'
 import PageFavorites from './pages/PageFavorite'
 import PageNotFound from './pages/PageNotFound'
-import { AppSelector } from './hooks'
+import { AppDispatch, AppSelector } from './hooks'
+import { fetchProducts } from './services/getProducts'
 function App() {
+	const dispatch = AppDispatch()
 	const basketItems = AppSelector(state => state.basketSlice.basketItems)
 	const favoriteItems = AppSelector(state => state.favoriteSlice.favoriteItems)
 	useEffect(() => {
@@ -24,6 +26,9 @@ function App() {
 	useEffect(() => {
 		localStorage.setItem('Favorite', JSON.stringify(favoriteItems))
 	}, [favoriteItems])
+	useEffect(() => {
+		dispatch(fetchProducts())
+	}, [])
 	return (
 		<>
 			<Header />
@@ -32,7 +37,7 @@ function App() {
 					<Route path='/' element={<PageHome />} />
 					<Route path='/product/:productId' element={<PageBue />} />
 					<Route path='/basket' element={<PageBasket />} />
-					<Route path='/catalog' element={<PageCatalog />} />
+					<Route path='/catalog/:catalogId' element={<PageCatalog />} />
 					<Route path='/checkout' element={<PageCheckout />} />
 					<Route path='/blog' element={<PageBlog />} />
 					<Route path='/delivery-dispatch' element={<DeliveryDispatch />} />

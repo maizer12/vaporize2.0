@@ -5,21 +5,17 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import BtnLink from '../../UI/Buttons/BtnLink'
 import './ProductCards.scss'
 import { AppDispatch, AppSelector } from '../../../hooks'
-import { fetchProducts } from '../../../store/slices/async/getProducts'
+import { fetchProducts } from '../../../services/getProducts'
 import ProductSkeleton from '../ProductCard/ProductSkeleton'
 interface IProps {
 	title?: string
 	rowActivity?: boolean
 }
 const ProductCards = ({ title }: IProps) => {
-	const dispatch = AppDispatch()
 	const { productItems: products, loading } = AppSelector(
 		state => state.productSlice
 	)
 	const [open, setOpen] = useState<number>(55)
-	useEffect(() => {
-		dispatch(fetchProducts())
-	}, [])
 	return (
 		<section className='product-cards'>
 			<div className='product-cards__header'>

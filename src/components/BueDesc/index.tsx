@@ -1,7 +1,7 @@
 import './bueDesc.Module.scss'
 import CartItems from '../Products/ProductCards'
 import Kit from '../Kit'
-import CartDB from '../../services/cartItemsDB.json'
+
 const BueDesc = () => {
 	return (
 		<section className='bue-desc'>

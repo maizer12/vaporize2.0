@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
-import './faq.Module.scss'
-import { faqText } from './faqText'
+import './PageFaq.scss'
+import { faqText } from './consts'
 const PageFaq = () => {
 	const breadcrumbs = [
 		'Головна',
@@ -9,12 +9,7 @@ const PageFaq = () => {
 		'Стартові набори',
 		'Стартовий набор OVNS W01 POD KIT (ORIGINAL)',
 	]
-	const [openAccordion, setOpenAccordion] = useState<boolean[]>([
-		true,
-		true,
-		true,
-		true,
-	])
+	const [openAccordion, setOpenAccordion] = useState<boolean[]>([...Array(9)])
 	const accordionOpen = (i: number) => {
 		setOpenAccordion(openAccordion.map((e, index) => (i === index ? !e : e)))
 	}
@@ -31,13 +26,13 @@ const PageFaq = () => {
 								src='/img/arrow.svg'
 								alt='arrow'
 								className={`faq-item__svg ${
-									openAccordion[i] ? 'svg-open' : ''
+									!openAccordion[i] ? 'svg-open' : ''
 								}`}
 							/>
 						</div>
 						<p
 							className={`faq-item__text ${
-								openAccordion[i] ? 'text-open' : ''
+								!openAccordion[i] ? 'text-open' : ''
 							}`}
 						>
 							<span>{e.text}</span>{' '}

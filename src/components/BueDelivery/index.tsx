@@ -1,6 +1,5 @@
 import React from 'react'
 import CartItems from '../Products/ProductCards'
-import CartDB from '../../services/cartItemsDB.json'
 const BueDelivery = () => {
 	return (
 		<section className='bue-delivery'>

@@ -4,7 +4,6 @@ import './bueReviews.Modules.scss'
 import ReviewsItem from './reviewsItem'
 import CartItems from '../Products/ProductCards'
 import ReviewsButton from '../UI/Buttons/ReviewsButton'
-import CartDB from '../../services/cartItemsDB.json'
 const BueReviews = () => {
 	const [rating, setRating] = useState(0)
 	const handleRating = (rate: number) => {

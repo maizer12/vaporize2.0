@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit'
-import ICart from '../../../types/ICart'
+import ICart from '../types/ICart'
 
 export const fetchProducts = createAsyncThunk<ICart[]>(
 	'products/fetchProducts',

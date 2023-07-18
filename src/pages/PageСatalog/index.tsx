@@ -1,11 +1,12 @@
 import Breadcrumbs from '../../components/UI/Breadcrumbs'
 import FilterCatalog from '../../components/Filter/filterCatalog'
 import './catalog.Module.scss'
-import cartItemsDB from '../../services/cartItemsDB.json'
 import ListHeader from '../../components/Header/ListHeader'
 import CatalogCarts from '../../components/Products/CatalogCarts'
 import { useState } from 'react'
+import { AppSelector } from '../../hooks'
 const PageCatalog = () => {
+	const items = AppSelector(state => state.productSlice.productItems)
 	const [opinionFilter, setOpinionFilter] = useState('1')
 	const [sumCarts, setSumCarts] = useState<string>('25')
 	const [rowActivity, setRowActivity] = useState<boolean>(true)
@@ -34,7 +35,7 @@ const PageCatalog = () => {
 						filterItems={opinionFilter}
 						sumCarts={sumCarts}
 						rowActivity={rowActivity}
-						items={cartItemsDB}
+						items={items}
 					/>
 				</div>
 			</div>

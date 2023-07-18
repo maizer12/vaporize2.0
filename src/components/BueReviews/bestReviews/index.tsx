@@ -3,10 +3,8 @@ import BestReviewsItem from './bestReviewsItem'
 import './bestReviews.Modules.scss'
 import ReviewsButton from '../../UI/Buttons/ReviewsButton'
 import CartItems from '../../Products/ProductCards'
-import CartItemsDB from '../../../services/cartItemsDB.json'
 import ICart from '../../../types/ICart'
 const BestReviews = () => {
-	const cartDB: ICart[] = CartItemsDB
 	return (
 		<section className='best-reviews'>
 			<div className='best-reviews__header'>

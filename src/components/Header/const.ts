@@ -29,10 +29,10 @@ export const headerButtons: IHeaderButtons[] = [
 ]
 export const navigationLinks: ILink[] = [
 	{ name: 'Каталог товарів', path: '/' },
-	{ name: 'Акції', path: '/catalog' },
-	{ name: 'Популярне ', path: '' },
-	{ name: 'Рod системи', path: '' },
-	{ name: 'Одноразові', path: '' },
-	{ name: 'Рідини ', path: '' },
+	{ name: 'Акції', path: '/catalog/promotion' },
+	{ name: 'Популярне ', path: '/catalog/popular' },
+	{ name: 'Рod системи', path: '/catalog/pod' },
+	{ name: 'Одноразові', path: '/catalog/disposable' },
+	{ name: 'Рідини', path: '/catalog/liquids' },
 	{ name: 'Блог', path: '/blog' },
 ]

@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 import ICart from '../../types/ICart'
-import { fetchProducts } from './async/getProducts'
+import { fetchProducts } from '../../services/getProducts'
 
 type IState = {
 	productItems: ICart[]
