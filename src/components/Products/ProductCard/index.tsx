@@ -80,7 +80,9 @@ const ProductCard = ({ cartElement, indx, open }: IProps) => {
 				<div className='product-card__price-status'>
 					<div className='product-card__price'>
 						<h4 className='product-card__num'>{cartElement.price} ₴</h4>
-						<p className='product-card__sale'>{cartElement.sale} ₴</p>
+						{cartElement.sale && (
+							<p className='product-card__sale'>{cartElement.sale} ₴</p>
+						)}
 					</div>
 					<p className='product-card__status'>в наявності</p>
 				</div>

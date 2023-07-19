@@ -78,7 +78,9 @@ const OpenProductContent = ({ setPopupSwitch, item }: IProps) => {
 				<Calculator amount={amount} setAmount={setAmount} />
 				<div className='bue-content__left-item'>
 					<div className='bue-content__price-sale'>
-						<p className='bue-content__sale'>{amount * item.sale} ₴</p>
+						{item.sale && (
+							<p className='bue-content__sale'>{amount * item.sale} ₴</p>
+						)}
 						<h6 className='bue-content__price'>{amount * item.price} ₴</h6>
 					</div>
 					<Cashback />

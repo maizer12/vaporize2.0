@@ -3,7 +3,7 @@ export default interface ICart {
 	image: string[]
 	name: string
 	price: number
-	sale: number
+	sale?: number
 	type: string
 	star: number
 	reviews: string[]
