@@ -10,6 +10,7 @@
 	margin-bottom: 20px;
 	cursor: pointer;
 	transition: 0.7s;
+
 	&__img {
 		display: flex;
 		position: relative;
@@ -18,12 +19,14 @@
 		margin: 0 auto;
 		height: 233px;
 		margin-bottom: 23px;
+
 		img {
 			width: 100%;
 			//height: auto;
-			object-fit: cover;
+			object-fit: contain;
 		}
 	}
+
 	&__type {
 		position: absolute;
 		top: 30px;

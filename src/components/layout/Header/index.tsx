@@ -1,20 +1,20 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
-import { AppSelector } from '../../hooks'
-import { headerMenu } from './const'
-import './Header.scss'
-import Language from './Language'
-import Navigation from './Navigation'
-import Contacts from './Contacts'
-import { logo } from '../../_config'
-import Search from '../Search'
-import HeaderButtons from './HeaderButtons'
-import Authorization from '../Authorization/Authorization'
+import { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
+import { AppSelector } from '../../../hooks';
+import { headerMenu } from './const';
+import './Header.scss';
+import Language from './Language';
+import Navigation from './Navigation';
+import Contacts from './Contacts';
+import { logo } from '../../../_config';
+import Search from '../../Search';
+import HeaderButtons from './HeaderButtons';
+import Authorization from '../../Authorization/Authorization';
 
 const Header = () => {
-	const patch = useLocation()
-	const [loginOpen, setLoginOpen] = useState(false)
-	const loginUser = AppSelector(state => state.auntificationSlice.userLogin)
+	const patch = useLocation();
+	const [loginOpen, setLoginOpen] = useState(false);
+	const loginUser = AppSelector(state => state.auntificationSlice.userLogin);
 
 	return (
 		<>
@@ -23,13 +23,7 @@ const Header = () => {
 					<div className='header__content container'>
 						<nav className='menu'>
 							{headerMenu.map(e => (
-								<Link
-									key={e.name}
-									to={e.path}
-									className={`menu__link ${
-										patch.pathname === e.path ? 'active-menu' : ''
-									}`}
-								>
+								<Link key={e.name} to={e.path} className={`menu__link ${patch.pathname === e.path ? 'active-menu' : ''}`}>
 									{e.name}
 								</Link>
 							))}
@@ -47,10 +41,7 @@ const Header = () => {
 								{loginUser.length >= 1 ? (
 									<button className='header__link'>{loginUser}</button>
 								) : (
-									<button
-										onClick={() => setLoginOpen(true)}
-										className='header__link'
-									>
+									<button onClick={() => setLoginOpen(true)} className='header__link'>
 										Увійти
 									</button>
 								)}
@@ -76,7 +67,7 @@ const Header = () => {
 			</header>
 			<Authorization open={loginOpen} setOpen={setLoginOpen} />
 		</>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;

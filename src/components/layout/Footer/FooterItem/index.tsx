@@ -1,10 +1,10 @@
-import React from 'react'
-import ILink from '../../../types/ILink'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import ILink from '../../../../types/ILink';
+import { Link } from 'react-router-dom';
 
 interface IProp {
-	links: ILink[]
-	name: string
+	links: ILink[];
+	name: string;
 }
 
 const FooterItem = ({ links, name }: IProp) => {
@@ -21,7 +21,7 @@ const FooterItem = ({ links, name }: IProp) => {
 				))}
 			</li>
 		</ul>
-	)
-}
+	);
+};
 
-export default FooterItem
+export default FooterItem;

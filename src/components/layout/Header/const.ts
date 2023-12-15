@@ -1,17 +1,17 @@
-import ILink from '../../types/ILink'
+import ILink from '../../../types/ILink';
 
 export const headerMenu: ILink[] = [
 	{ name: 'Доставка и оплата', path: '/delivery-dispatch' },
 	{ name: 'Контакти', path: '#' },
 	{ name: 'FAQ', path: '/faq' },
-]
+];
 
 type IHeaderButtons = {
-	url: string
-	name: string
-	path: string
-	sum: number
-}
+	url: string;
+	name: string;
+	path: string;
+	sum: number;
+};
 export const headerButtons: IHeaderButtons[] = [
 	{
 		url: '/img/btn/1.svg',
@@ -26,7 +26,7 @@ export const headerButtons: IHeaderButtons[] = [
 		path: '/basket',
 		sum: 0,
 	},
-]
+];
 export const navigationLinks: ILink[] = [
 	{ name: 'Каталог товарів', path: '/' },
 	{ name: 'Акції', path: '/catalog/promotion' },
@@ -35,4 +35,4 @@ export const navigationLinks: ILink[] = [
 	{ name: 'Одноразові', path: '/catalog/disposable' },
 	{ name: 'Рідини', path: '/catalog/liquids' },
 	{ name: 'Блог', path: '/blog' },
-]
+];

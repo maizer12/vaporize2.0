@@ -1,30 +1,30 @@
-import './assets/style/main.scss'
-import { useEffect } from 'react'
-import Footer from './components/Footer'
-import Header from './components/Header'
-import PageHome from './pages/PageHome'
-import { Route, Routes } from 'react-router-dom'
-import PageBue from './pages/PageProduct'
-import PageBasket from './pages/PageBasket'
-import PageCatalog from './pages/PageСatalog'
-import PageCheckout from './pages/PageCheckout'
-import PageBlog from './pages/PageBlog'
-import DeliveryDispatch from './pages/PageDeliveryDispatch'
-import PageFaq from './pages/PageFaq'
-import PageContact from './pages/PageContact'
-import PageFavorites from './pages/PageFavorite'
-import PageNotFound from './pages/PageNotFound'
-import { AppSelector } from './hooks'
+import './assets/style/main.scss';
+import { useEffect } from 'react';
+import Footer from './components/layout/Footer';
+import Header from './components/layout/Header';
+import PageHome from './pages/PageHome';
+import { Route, Routes } from 'react-router-dom';
+import PageBue from './pages/PageProduct';
+import PageBasket from './pages/PageBasket';
+import PageCatalog from './pages/PageСatalog';
+import PageCheckout from './pages/PageCheckout';
+import PageBlog from './pages/PageBlog';
+import DeliveryDispatch from './pages/PageDeliveryDispatch';
+import PageFaq from './pages/PageFaq';
+import PageContact from './pages/PageContact';
+import PageFavorites from './pages/PageFavorite';
+import PageNotFound from './pages/PageNotFound';
+import { AppSelector } from './hooks';
 
 function App() {
-	const basketItems = AppSelector(state => state.basketSlice.basketItems)
-	const favoriteItems = AppSelector(state => state.favoriteSlice.favoriteItems)
+	const basketItems = AppSelector(state => state.basketSlice.basketItems);
+	const favoriteItems = AppSelector(state => state.favoriteSlice.favoriteItems);
 	useEffect(() => {
-		localStorage.setItem('Basket', JSON.stringify(basketItems))
-	}, [basketItems])
+		localStorage.setItem('Basket', JSON.stringify(basketItems));
+	}, [basketItems]);
 	useEffect(() => {
-		localStorage.setItem('Favorite', JSON.stringify(favoriteItems))
-	}, [favoriteItems])
+		localStorage.setItem('Favorite', JSON.stringify(favoriteItems));
+	}, [favoriteItems]);
 	return (
 		<>
 			<Header />
@@ -45,7 +45,7 @@ function App() {
 			}
 			<Footer />
 		</>
-	)
+	);
 }
 
-export default App
+export default App;

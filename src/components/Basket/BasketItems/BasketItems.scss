@@ -1,4 +1,30 @@
 .basket-items {
 	margin-top: 45px;
 	min-height: 450px;
+	max-height: 480px;
+	padding: 0 25px;
+	overflow-y: auto;
+
+	&::-webkit-scrollbar {
+		width: 4px;
+		cursor: pointer;
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #646464;
+		border-radius: 25px;
+		cursor: pointer;
+	}
+
+	/* Для Firefox */
+	&::-moz-scrollbar {
+		width: 12px;
+		cursor: pointer;
+	}
+
+	&::-moz-scrollbar-thumb {
+		background-color: #007bff;
+		border-radius: 6px;
+		cursor: pointer;
+	}
 }
