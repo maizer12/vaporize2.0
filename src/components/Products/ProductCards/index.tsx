@@ -10,8 +10,13 @@ import ProductSkeleton from '../ProductCard/ProductSkeleton'
 interface IProps {
 	title?: string
 	rowActivity?: boolean
+	test?: string
 }
-const ProductCards = ({ title }: IProps) => {
+const ProductCards = ({ title, test }: IProps) => {
+	const dispatch = AppDispatch()
+	useEffect(() => {
+		dispatch(fetchProducts(test ? test : 'new'))
+	}, [])
 	const { productItems: products, loading } = AppSelector(
 		state => state.productSlice
 	)

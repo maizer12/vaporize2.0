@@ -1,10 +1,16 @@
 import { createSlice } from '@reduxjs/toolkit'
 import ICart from '../../types/ICart'
-import { fetchProducts } from '../../services/getProducts'
+import { fetchNewProducts, fetchProducts } from '../../services/getProducts'
 
 type IState = {
 	productItems: ICart[]
+	newProducts: ICart[]
+	promotionsProducts: ICart[]
+	popularProducts: ICart[]
 	loading: boolean
+	loadingNewProducts: boolean
+	loadingPromotionsProducts: boolean
+	loadingPopularProducts: boolean
 }
 
 //const { data: products, isLoading } = productApi.useFetchAllProductsQuery('')
@@ -12,6 +18,12 @@ type IState = {
 const initialState: IState = {
 	productItems: [],
 	loading: true,
+	newProducts: [],
+	loadingNewProducts: true,
+	promotionsProducts: [],
+	loadingPromotionsProducts: true,
+	popularProducts: [],
+	loadingPopularProducts: true,
 }
 
 const productSlice = createSlice({

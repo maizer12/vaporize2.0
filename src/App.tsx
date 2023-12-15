@@ -14,10 +14,9 @@ import PageFaq from './pages/PageFaq'
 import PageContact from './pages/PageContact'
 import PageFavorites from './pages/PageFavorite'
 import PageNotFound from './pages/PageNotFound'
-import { AppDispatch, AppSelector } from './hooks'
-import { fetchProducts } from './services/getProducts'
+import { AppSelector } from './hooks'
+
 function App() {
-	const dispatch = AppDispatch()
 	const basketItems = AppSelector(state => state.basketSlice.basketItems)
 	const favoriteItems = AppSelector(state => state.favoriteSlice.favoriteItems)
 	useEffect(() => {
@@ -26,9 +25,6 @@ function App() {
 	useEffect(() => {
 		localStorage.setItem('Favorite', JSON.stringify(favoriteItems))
 	}, [favoriteItems])
-	useEffect(() => {
-		dispatch(fetchProducts())
-	}, [])
 	return (
 		<>
 			<Header />

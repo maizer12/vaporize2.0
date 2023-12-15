@@ -1,12 +1,19 @@
+type IReviews = {
+	user: string;
+	text: string;
+	stars: number;
+};
 export default interface ICart {
-	amount: number
-	image: string[]
-	name: string
-	price: number
-	sale?: number
-	type: string
-	star: number
-	reviews: string[]
-	cashback: number
-	id: number
+	count: number;
+	image: string[];
+	name: string;
+	colors: string[];
+	desc: string;
+	price: number;
+	type: string;
+	star: number;
+	reviews: IReviews[];
+	id: number;
+	cashback?: number;
+	sale?: number;
 }

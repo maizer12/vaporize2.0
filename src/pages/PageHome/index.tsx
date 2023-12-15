@@ -7,12 +7,12 @@ const PageHome = () => {
 	return (
 		<main>
 			<SliderHome />
-			<CartItems title={'Новинки товарів'} />
-			<CartItems title={'Популярні товари'} />
+			<CartItems title={'Новинки товарів'} test='new' />
+			<CartItems title={'Популярні товари'} test='hot' />
 			<div className='banner'>
 				<img width={1110} height={304} src='/img/banner.jpg' alt='banner' />
 			</div>
-			<CartItems title={'Товари зі знижкою'} />
+			<CartItems title={'Товари зі знижкою'} test='new' />
 			<div className='home-text'>
 				<div className='home-text__img'>
 					<img width={13} height={19} src='/img/bord.svg' alt='border-icon' />

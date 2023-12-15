@@ -14,7 +14,7 @@ import {
 function tc(a: string) {
 	if (a === 'NEW') {
 		return 'radial-gradient(131.25% 131.25% at 50.68% 131.25%, #461E4D 0%, #92499E 100%),linear-gradient(0deg, #C4C4C4, #C4C4C4)'
-	} else if (a === 'Скидка') {
+	} else if (a === 'Discount') {
 		return 'radial-gradient(131.25% 131.25% at 50.68% 131.25%, #DF3616 0%, #FF7D65 100%)'
 	} else if (a === 'HOT') {
 		return 'radial-gradient(131.25% 131.25% at 50.68% 131.25%, #A3260F 0%, #DF3616 100%)'
