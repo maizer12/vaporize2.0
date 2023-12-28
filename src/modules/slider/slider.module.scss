@@ -1,0 +1,7 @@
+$size-bg: calc((100vw - 1100px) / 2);
+.test {
+	background-color: red;
+	height: 10px;
+	position: relative;
+	max-width: $size-bg;
+}

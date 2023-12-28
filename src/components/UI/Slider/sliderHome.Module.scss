@@ -2,17 +2,38 @@
 	background-color: #461e4d;
 	width: 100%;
 	background-size: cover;
+
 	&__content {
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
 		color: #fff;
+		max-width: 45%;
 	}
+
 	&__product {
 		display: flex;
 		align-items: flex-end;
 		height: 520px;
+		max-width: 54%;
+		position: relative;
 	}
+
+	&__images {
+		max-width: 100%;
+
+		img {
+			width: fit-content;
+			max-width: 100%;
+			animation: productAnim 2s infinite alternate-reverse;
+
+			&:hover {
+				animation: pause;
+				cursor: pointer;
+			}
+		}
+	}
+
 	&__item {
 		display: flex;
 		justify-content: space-between;
@@ -20,43 +41,48 @@
 		height: 600px;
 		margin: 0px auto;
 	}
-	&__text {
-		width: 470px;
-	}
+
 	&__title {
-		font-size: 72px;
+		font-size: 46px;
 		font-weight: 700;
-		line-height: 85px;
+		line-height: 1.4;
 		letter-spacing: 0em;
 		text-align: left;
 		text-transform: uppercase;
+		margin-bottom: 2px;
 	}
+
 	&__text {
-		font-size: 16px;
+		font-size: 26px;
 		font-weight: 400;
-		line-height: 24px;
+		line-height: 1.5;
 		letter-spacing: 0em;
 		text-align: left;
 	}
+
 	&__btn {
-		margin-top: 50px;
+		margin-top: 32px;
 		font-size: 16px;
 		font-weight: 700;
 		line-height: 24px;
 		letter-spacing: 0em;
 		text-align: left;
 		display: inline-block;
-		width: 270px;
-		padding: 15px 0;
+		min-width: 178px;
+		padding: 15px 10px;
 		text-align: center;
 	}
+
 	&__numbers {
+		position: relative;
+		z-index: 2;
 		display: flex;
 		flex-direction: column;
 		row-gap: 15px;
 		align-items: flex-end;
-		margin-right: 20px;
+		margin-right: -20px;
 	}
+
 	&__price-sale {
 		font-size: 36px;
 		font-weight: 900;
@@ -65,6 +91,7 @@
 		text-align: left;
 		color: #fff;
 		position: relative;
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -76,32 +103,34 @@
 			transform: rotate(161deg);
 		}
 	}
+
 	&__price {
 		font-size: 48px;
 		font-weight: 900;
 		line-height: 56px;
 		letter-spacing: 0em;
 		text-align: left;
-		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-			'Lucida Sans', Arial, sans-serif;
+		font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 		background-color: #c62206;
 		color: #fff;
 		padding: 7px 24px;
 	}
+
 	&__percent {
 		color: #fff;
-		font-size: 60px;
+		font-size: 42px;
 		font-weight: 900;
-		line-height: 70px;
+		line-height: 1.2;
 		text-align: left;
 		position: absolute;
-		right: 0;
-		top: 84px;
+		right: -20px;
+		top: 24px;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 191px;
-		height: 191px;
+		width: 145px;
+		height: 145px;
+		transform: rotate(-5deg);
 		background-color: #c62206;
 		border-radius: 50%;
 	}
@@ -144,7 +173,16 @@
 	font-size: 27px;
 }
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-	.swiper-pagination-bullet {
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
 	margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 14px);
+}
+@keyframes productAnim {
+	0% {
+		//opacity: 0;
+		transform: scale(0.8) rotate(0deg);
+	}
+	100% {
+		opacity: 1;
+		transform: scale(1) rotate(4deg);
+	}
 }

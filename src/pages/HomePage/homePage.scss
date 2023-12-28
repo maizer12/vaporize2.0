@@ -1,21 +1,24 @@
 .banner {
 	max-width: 1110px;
 	margin: 60px auto 0;
+
 	img {
 		object-fit: cover;
-        width: 100%;
+		width: 100%;
 	}
 }
 .home-text {
 	width: 1110px;
 	margin: 0 auto;
 	padding: 60px 0 40px;
-	&__img{
+
+	&__img {
 		margin-bottom: 40px;
 		display: flex;
 		justify-content: center;
 		position: relative;
-		&::before{
+
+		&::before {
 			content: '';
 			background-color: #616161;
 			width: 100%;
@@ -24,7 +27,8 @@
 			top: 50%;
 			transform: translateY(-50%);
 		}
-		&::after{
+
+		&::after {
 			content: '';
 			background-color: rgb(255, 255, 255);
 			top: 0;
@@ -32,11 +36,13 @@
 			height: 100%;
 			position: absolute;
 		}
-		img{
+
+		img {
 			position: relative;
 			z-index: 3;
 		}
 	}
+
 	&__title {
 		font-size: 24px;
 		font-weight: 700;
@@ -45,6 +51,7 @@
 		text-align: left;
 		margin-bottom: 30px;
 	}
+
 	&__desc {
 		font-size: 14px;
 		font-weight: 400;
