@@ -1,7 +1,82 @@
-$size-bg: calc((100vw - 1100px) / 2);
+.main {
+	padding-top: 50px;
+}
+
 .test {
-	background-color: red;
-	height: 10px;
 	position: relative;
-	max-width: $size-bg;
+
+	&::after,
+	&::before {
+		content: '';
+		background-color: red;
+		position: absolute;
+		height: 100%;
+		top: 0;
+		z-index: 20;
+		opacity: 0.7;
+		background-color: #fff;
+		width: calc((100vw - 1100px) / 2);
+		left: 0;
+	}
+
+	&::before {
+		left: auto;
+		right: 0;
+	}
+}
+
+.slide {
+	max-width: 250px;
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 25px;
+
+	.title {
+		font-size: 30px;
+		font-weight: 700;
+		line-height: 35px;
+		letter-spacing: 0em;
+		text-align: left;
+	}
+
+	.buttons {
+		display: flex;
+		column-gap: 7px;
+	}
+
+	button {
+		background: none;
+		border: 1px solid rgb(255, 254, 254);
+		border-color: #df3616;
+		width: 35px;
+		height: 35px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		svg {
+			width: 16px;
+
+			path {
+				fill: #df3616;
+			}
+		}
+
+		&:first-child {
+			transform: rotate(180deg);
+		}
+
+		&:last-child {
+			background-color: #df3616;
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+	}
 }

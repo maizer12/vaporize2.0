@@ -10,7 +10,7 @@ export default interface ICart {
 	colors: string[];
 	desc: string;
 	price: number;
-	type: string;
+	categories: string;
 	star: number;
 	reviews: IReviews[];
 	id: number;

@@ -27,30 +27,6 @@
 		}
 	}
 
-	&__type {
-		position: absolute;
-		top: 30px;
-		padding: 4px 16px;
-		&-span {
-			content: '';
-			top: 0;
-			left: -10px;
-			transform: skew(-27deg);
-			position: absolute;
-			width: 110%;
-			height: 100%;
-		}
-		&-text {
-			position: relative;
-			z-index: 2;
-			color: #fff;
-			font-size: 14px;
-			font-weight: 700;
-			line-height: 1.2;
-			letter-spacing: 0em;
-			text-align: center;
-		}
-	}
 	&__title {
 		color: #000;
 		font-family: Raleway;

@@ -1,3 +1,5 @@
+export type CategoriesType = 'tv';
+
 interface Reviews {
 	user: string;
 	text: string;
@@ -12,7 +14,7 @@ export interface ICard {
 	colors: string[];
 	desc: string;
 	price: number;
-	type: string;
+	categories: CategoriesType;
 	star: number;
 	reviews: Reviews[];
 	sale: number;
