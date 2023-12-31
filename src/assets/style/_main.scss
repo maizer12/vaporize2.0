@@ -1,5 +1,10 @@
 @import './import.scss';
 
+body {
+	background-color: var(--white);
+	color: var(--black);
+	font-family: var(--font-family);
+}
 main {
 	height: 100%;
 	flex: 1 0 auto;

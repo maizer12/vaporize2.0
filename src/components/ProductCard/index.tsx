@@ -52,12 +52,11 @@ const ProductCard: FC<IProps> = ({ cartElement, indx, open }): JSX.Element => {
 		<Link to={`/product/${cartElement.id}`} className={`${style.card} product-card ${openCheck}`}>
 			<div className={style['product-img']}>
 				<ProductCategoryLabel category={cartElement.categories as 'tv'} />
-				{/* <h4 className='product-card__type-text'>{cartElement.categories}</h4> */}
 				<div className={style.image}>
 					<img src={cartElement.image[0]} alt={cartElement.name} />
 				</div>
 			</div>
-			<h4 className='product-card__title'>{cartElement.name}</h4>
+			<h4 className={style.title}>{cartElement.name}</h4>
 			<div className='product-card__rating'>
 				<div className='product-card__star'>
 					<Rating onClick={handleRating} initialValue={cartElement.star} ratingValue={rating} size={20} />
