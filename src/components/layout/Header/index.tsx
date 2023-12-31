@@ -53,7 +53,7 @@ const Header = () => {
 					<div className='header-inner__content container'>
 						<div className='header-inner__colum'>
 							<Link to='/' className='header-inner__logo'>
-								<img src={logo.header} alt='logo' />
+								<img src={logo} alt='logo' />
 							</Link>
 							<Search />
 						</div>

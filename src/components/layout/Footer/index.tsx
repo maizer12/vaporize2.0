@@ -1,4 +1,4 @@
-import './footer.Module.scss';
+import style from './Footer.module.scss';
 import FooterItem from './FooterItem';
 import { logo } from '../../../_config';
 import { columnFooterOne, columnFooterTwo, columnFooterThree } from './const';
@@ -8,7 +8,7 @@ const Footer = () => {
 		<footer className='footer'>
 			<ul className='footer__items'>
 				<li className='footer-colum'>
-					<img width={160} height={43} src={logo.footer} alt='logo' className='footer-colum__logo' />
+					<img width={160} height={43} src={logo} alt='logo' className='footer-colum__logo' />
 					<div className='footer-colum__number'>
 						<a href='tel:+38(000)0000000' className='footer-colum__link'>
 							+38 (000) 000 00 00

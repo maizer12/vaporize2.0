@@ -1,11 +1,3 @@
-import logoFooter from './assets/img/logo-footer.svg';
-import logoMain from './assets/img/logo.png';
-type ILogo = {
-	footer: string;
-	header: string;
-};
+import MainLogo from './assets/img/logo.png';
 
-export const logo: ILogo = {
-	footer: logoFooter,
-	header: logoMain,
-};
+export const logo: string = MainLogo;

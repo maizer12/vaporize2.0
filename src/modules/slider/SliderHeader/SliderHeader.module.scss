@@ -1,0 +1,58 @@
+.header {
+	display: flex;
+	justify-content: space-between;
+	column-gap: 15px;
+	margin-bottom: 42px;
+
+	.buttons {
+		display: flex;
+		column-gap: 7px;
+	}
+
+	button {
+		background: none;
+		border: 2px solid rgb(255, 254, 254);
+		border-color: #df3616;
+		width: 35px;
+		height: 35px;
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: all 0.4s ease-in-out;
+
+		svg {
+			width: 16px;
+
+			path {
+				transition: 0.4s;
+				fill: #df3616;
+			}
+		}
+
+		&:first-child {
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+
+		&:hover {
+			background-color: #df3616;
+
+			svg {
+				path {
+					fill: #fff;
+				}
+			}
+		}
+
+		&:active {
+			transform: rotate(30deg);
+		}
+	}
+}
+
+.header-controllers {
+	display: flex;
+	column-gap: 25px;
+}

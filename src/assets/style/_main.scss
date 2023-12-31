@@ -4,6 +4,7 @@ body {
 	background-color: var(--white);
 	color: var(--black);
 	font-family: var(--font-family);
+	font-variant-numeric: lining-nums proportional-nums;
 }
 main {
 	height: 100%;

@@ -1,6 +1,6 @@
-import React from 'react'
-import Buttons from '../UI/Buttons/BuyButton'
-import './yourOrder.Module.scss'
+import Buttons from '../UI/Buttons/BuyButton';
+import './YourOrder.module.scss';
+
 const YourOrder = () => {
 	return (
 		<section className='your-order'>
@@ -10,20 +10,10 @@ const YourOrder = () => {
 			</div>
 			<ul className='your-order__items'>
 				<li className='order-item order-item_space-between'>
-					<img
-						src='/img/products/1.jpg'
-						width={112}
-						height={103}
-						alt='product'
-						className='order-item__img'
-					/>
+					<img src='/img/products/1.jpg' width={112} height={103} alt='product' className='order-item__img' />
 					<div className='order-item__text'>
-						<h5 className='order-item__name'>
-							Cтартовий набiр OVNS W01 POD KIT (original)
-						</h5>
-						<p className='order-item__desc'>
-							Ціна: 800 грн Кількість: 1 Параметри продукту (смак, і т п)
-						</p>
+						<h5 className='order-item__name'>Cтартовий набiр OVNS W01 POD KIT (original)</h5>
+						<p className='order-item__desc'>Ціна: 800 грн Кількість: 1 Параметри продукту (смак, і т п)</p>
 					</div>
 				</li>
 				<li className='order-item'>
@@ -50,7 +40,7 @@ const YourOrder = () => {
 				<Buttons width={244}>ПІДТВЕРДИТИ ЗАМОВЛЕННЯ</Buttons>
 			</div>
 		</section>
-	)
-}
+	);
+};
 
-export default YourOrder
+export default YourOrder;
