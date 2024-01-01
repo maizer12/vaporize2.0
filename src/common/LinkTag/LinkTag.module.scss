@@ -1,0 +1,16 @@
+.link {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 180%;
+  color: var(--white);
+}
+
+.opacity {
+  transition: 0.4s ease;
+  opacity: 0.6;
+
+  &:hover {
+    opacity: 1;
+  }
+}

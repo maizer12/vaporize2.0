@@ -1,0 +1,24 @@
+.footer {
+  background-color: #260f26;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 15px;
+  padding: 25px 0;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--grey);
+  padding: 15px 0;
+
+  p {
+    color: var(--grey);
+    font-weight: 600;
+  }
+}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
