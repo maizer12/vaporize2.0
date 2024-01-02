@@ -1,13 +1,16 @@
 .text {
-	font-size: 16px;
-	font-style: normal;
-	font-weight: 400;
-	line-height: 150%;
-	color: var(--white);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--white);
 }
 .md {
-	font-size: 14px;
+  font-size: 14px;
 }
 .sm {
-	font-size: 12px;
+  font-size: 12px;
+}
+.success {
+  color: var(--green-light);
 }
