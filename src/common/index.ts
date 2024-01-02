@@ -3,3 +3,4 @@ export * from './PTag';
 export * from './Socials';
 export * from './LinkTag';
 export * from './Button';
+export * from './Stars';

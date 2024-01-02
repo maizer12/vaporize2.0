@@ -1,19 +1,14 @@
 import { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
-import { Rating } from 'react-simple-star-rating';
 import LikeSetting from '../UI/LikeSetting';
 import style from './ProductCard.module.scss';
 import ProductCategoryLabel from '../../common/ProductCategoryLabel';
 import { ProductCardProps } from './ProductCard.props';
-import { Button, HTag, LinkTag, PTag } from '../../common';
+import { Button, HTag, LinkTag, PTag, Stars } from '../../common';
 
 const ProductCard: FC<ProductCardProps> = ({ cartElement, indx, open }): JSX.Element => {
   const reviewsSum = cartElement.reviews.length;
-  const [rating, setRating] = useState(0);
-  const handleRating = (rate: number) => {
-    setRating(rate);
-  };
 
   return (
     <Link to={`/product/${cartElement.id}`} className={`${style.card}`}>
@@ -25,9 +20,7 @@ const ProductCard: FC<ProductCardProps> = ({ cartElement, indx, open }): JSX.Ele
       </div>
       <HTag tag="h5">{cartElement.name.slice(0, 20) + '...'}</HTag>
       <div className={style.rating}>
-        <div className="product-card__star">
-          <Rating onClick={handleRating} initialValue={cartElement.star} ratingValue={rating} size={20} />
-        </div>
+        <Stars value={4} />
         <LinkTag path="/reviews/product:id" animation="outline">
           {reviewsSum} відгуків
         </LinkTag>
