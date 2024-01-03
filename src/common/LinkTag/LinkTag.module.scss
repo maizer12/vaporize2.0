@@ -4,6 +4,13 @@
   font-weight: 500;
   line-height: 180%;
   color: var(--white);
+  display: flex;
+  column-gap: 4px;
+  align-items: center;
+}
+
+.black {
+  color: var(--black);
 }
 
 .opacity {
@@ -37,6 +44,24 @@
 
     &::after {
       width: 0;
+    }
+  }
+}
+.arrow {
+  opacity: 1;
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.6s ease-in;
+
+  img {
+    transition: 0.4s ease-in;
+  }
+
+  &:hover {
+    color: var(--red);
+
+    img {
+      transform: translateX(5px);
     }
   }
 }

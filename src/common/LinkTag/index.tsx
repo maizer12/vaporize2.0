@@ -4,20 +4,31 @@ import { Link } from 'react-router-dom';
 import cn from 'classnames';
 import style from './LinkTag.module.scss';
 
-export const LinkTag: FC<LinkTagProps> = ({ path, children, animation = 'opacity', array = false, isTag = false }) => {
-  const getClass = cn(style[animation], style.link);
+export const LinkTag: FC<LinkTagProps> = ({
+  path,
+  children,
+  animation = 'opacity',
+  arrow = false,
+  isTag = false,
+  size = 'sm',
+  color,
+}) => {
+  const className = cn(style[animation], style.link, size, style[color || ''], { [style.arrow]: arrow });
+  const icon = arrow && <img src="img/icons/arrow.svg" alt="arrow" />;
 
   if (isTag) {
     return (
-      <a href={path} target="_blank" className={getClass}>
+      <a href={path} target="_blank" className={className}>
         {children}
+        {icon}
       </a>
     );
   }
 
   return (
-    <Link to={path} className={getClass}>
+    <Link to={path} className={className}>
       {children}
+      {icon}
     </Link>
   );
 };

@@ -11,12 +11,14 @@ const ProductCard: FC<ProductCardProps> = ({ cartElement, indx, open }): JSX.Ele
   const reviewsSum = cartElement.reviews.length;
 
   return (
-    <Link to={`/product/${cartElement.id}`} className={`${style.card}`}>
+    <li className={style.card}>
       <div className={style['product-img']}>
-        <ProductCategoryLabel category={cartElement.categories as 'tv'} />
-        <div className={style.image}>
-          <img src={cartElement.image[0]} alt={cartElement.name} />
-        </div>
+        <Link to={`/product/${cartElement.id}`}>
+          <ProductCategoryLabel category={cartElement.categories as 'tv'} />
+          <div className={style.image}>
+            <img src={cartElement.image[0]} alt={cartElement.name} />
+          </div>
+        </Link>
       </div>
       <HTag tag="h5">{cartElement.name.slice(0, 20) + '...'}</HTag>
       <div className={style.rating}>
@@ -42,7 +44,7 @@ const ProductCard: FC<ProductCardProps> = ({ cartElement, indx, open }): JSX.Ele
           <LikeSetting active={false} />
         </button>
       </div>
-    </Link>
+    </li>
   );
 };
 

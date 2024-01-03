@@ -13,31 +13,31 @@ import SliderWrapper from './SliderWrapper';
 SwiperCore.use([A11y]);
 
 const Slider: FC<SliderProps> = (): JSX.Element => {
-	const items = newItems as ICard[];
-	const [swiper, setSwiper] = useState<SwiperCore | null>(null);
+  const items = newItems as ICard[];
+  const [swiper, setSwiper] = useState<SwiperCore | null>(null);
 
-	return (
-		<section className={style.slider}>
-			<SliderHeader swiper={swiper} />
-			<SliderWrapper>
-				<Swiper
-					spaceBetween={50}
-					slidesPerView='auto'
-					loop={true}
-					centeredSlides={true}
-					onSwiper={swiper => {
-						setSwiper(swiper || null);
-					}}
-				>
-					{items.map((e, index) => (
-						<SwiperSlide key={e.id} className={style.slide}>
-							<ProductCard indx={index} cartElement={e} open={44} />
-						</SwiperSlide>
-					))}
-				</Swiper>
-			</SliderWrapper>
-		</section>
-	);
+  return (
+    <section className={style.slider}>
+      <SliderHeader swiper={swiper} />
+      <SliderWrapper>
+        <Swiper
+          spaceBetween={50}
+          slidesPerView="auto"
+          loop={true}
+          centeredSlides={true}
+          onSwiper={(swiper) => {
+            setSwiper(swiper || null);
+          }}
+        >
+          {items.map((e, index) => (
+            <SwiperSlide key={e.id} className={style.slide}>
+              <ProductCard indx={index} cartElement={e} open={44} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </SliderWrapper>
+    </section>
+  );
 };
 
 export default Slider;
