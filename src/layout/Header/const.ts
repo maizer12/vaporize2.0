@@ -1,4 +1,4 @@
-import ILink from '../../types/ILink';
+import ILink from '../../@types/ILink';
 
 export const headerMenu: ILink[] = [
   { name: 'Доставка и оплата', path: '/delivery-dispatch' },

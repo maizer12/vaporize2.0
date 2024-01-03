@@ -2,8 +2,8 @@ import './assets/style/_main.scss';
 import { useEffect } from 'react';
 import { Header, Footer } from './layout';
 import HomePage from './pages/HomePage';
+import ProductPage from './pages/ProductPage';
 import { Route, Routes } from 'react-router-dom';
-import PageBue from './pages/PageProduct';
 import PageBasket from './pages/PageBasket';
 import PageCatalog from './pages/PageСatalog';
 import PageCheckout from './pages/PageCheckout';
@@ -30,7 +30,7 @@ function App() {
       {
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/product/:productId" element={<PageBue />} />
+          <Route path="/product/:productId" element={<ProductPage />} />
           <Route path="/basket" element={<PageBasket />} />
           <Route path="/catalog/:catalogId" element={<PageCatalog />} />
           <Route path="/checkout" element={<PageCheckout />} />

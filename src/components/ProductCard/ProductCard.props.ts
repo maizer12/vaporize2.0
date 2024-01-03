@@ -1,7 +1,7 @@
-import ICart from '../../types/ICart';
+import ICart from '../../@types/ICart';
 
 export interface ProductCardProps {
-	cartElement: ICart;
-	indx: number;
-	open: number;
+  cartElement: ICart;
+  indx: number;
+  open: number;
 }

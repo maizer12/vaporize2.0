@@ -1,30 +1,20 @@
-import React, { useState } from 'react'
-import './bueBoxImage.Module.scss'
-import ImageMin from './imageMin'
-import ICart from '../../../types/ICart'
+import React, { useState } from 'react';
+import './bueBoxImage.Module.scss';
+import ImageMin from './imageMin';
+import ICart from '../../../@types/ICart';
 type IProps = {
-	product: ICart
-}
+  product: ICart;
+};
 const BueBoxImage = ({ product }: IProps) => {
-	const [openImage, setOpenImage] = useState(0)
-	return (
-		<div className='bue-image'>
-			<div className='bue-image__content'>
-				<div className='bue-image__type'></div>
-				<img
-					width={540}
-					height={494}
-					src={product.image[openImage]}
-					alt='bue-img'
-				/>
-			</div>
-			<ImageMin
-				openImage={openImage}
-				setOpenImage={setOpenImage}
-				items={product.image}
-			/>
-		</div>
-	)
-}
+  const [openImage, setOpenImage] = useState(0);
+  return (
+    <div className="bue-image">
+      <div className="bue-image__content">
+        <img src={product.image[openImage]} alt="bue-img" />
+      </div>
+      <ImageMin openImage={openImage} setOpenImage={setOpenImage} items={product.image} />
+    </div>
+  );
+};
 
-export default BueBoxImage
+export default BueBoxImage;

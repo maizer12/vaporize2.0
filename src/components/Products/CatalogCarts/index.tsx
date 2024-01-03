@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from 'react';
 import PaginationCards from '../../UI/Pagination/PaginationCards';
 import './catalogCarts.Module.scss';
-import ICart from '../../../types/ICart';
+import ICart from '../../../@types/ICart';
 import { Link } from 'react-router-dom';
 import { setCartAdd } from '../../../store/slices/cartSlice';
 import { AppDispatch } from '../../../hooks';
