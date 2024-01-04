@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './bueBoxImage.Module.scss';
 import ImageMin from './imageMin';
 import ICart from '../../../@types/ICart';
+import { ProductDetails } from '../../../modules/product';
 type IProps = {
   product: ICart;
 };

@@ -11,6 +11,7 @@ import { breadcrumbsProductPage } from './_config';
 import './PageProduct.scss';
 import OpenProduct from '../../components/OpenProduct';
 import { clearScroll } from '../../helpers/clearScroll';
+import { ProductDetails } from '../../modules/product';
 const PageProduct = () => {
   const pagination: JSX.Element[] = [<BueDesc />, <BueCompatible />, <BueReviews />, <BestReviews />, <BueDelivery />];
   useEffect(() => {
@@ -20,6 +21,7 @@ const PageProduct = () => {
   return (
     <main className="bue">
       <Breadcrumbs breadcrumbs={breadcrumbsProductPage} />
+      <ProductDetails />
       <OpenProduct />
       <BuePagination setNumber={setNum} />
       {pagination[num]}

@@ -3,7 +3,6 @@ import SwiperCore, { A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { ICard } from '../../@types/ICard';
 import style from './Slider.module.scss';
-import BtnLink from '../../components/UI/Buttons/BtnLink';
 import newItems from '../../services/newItems.json';
 import ProductCard from '../../components/ProductCard';
 import { SliderProps } from './Slider.props';
