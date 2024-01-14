@@ -2,7 +2,7 @@ import CartItems from '../../components/Products/ProductCards';
 import News from '../../components/News';
 import SliderHome from '../../components/UI/Slider';
 import './homePage.scss';
-import Slider from '../../modules/slider';
+import Slider from '../../modules/slider/components';
 
 const HomePage = (): JSX.Element => {
   return (

@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { SliderHeaderProps } from './SliderHeader.props';
-import BtnLink from '../../../components/UI/Buttons/BtnLink';
+import BtnLink from '../../../../components/UI/Buttons/BtnLink';
 import style from './SliderHeader.module.scss';
-import { HTag, LinkTag } from '../../../common';
+import { HTag, LinkTag } from '../../../../common';
 
 const SliderHeader: FC<SliderHeaderProps> = ({ swiper }): JSX.Element => {
   return (

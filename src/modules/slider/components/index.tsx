@@ -1,10 +1,10 @@
 import { FC, useState } from 'react';
 import SwiperCore, { A11y } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { ICard } from '../../@types/ICard';
+import { ICard } from '../../../@types/ICard';
 import style from './Slider.module.scss';
-import newItems from '../../services/newItems.json';
-import ProductCard from '../../components/ProductCard';
+import newItems from '../../../services/newItems.json';
+import ProductCard from '../../../components/ProductCard';
 import { SliderProps } from './Slider.props';
 import SliderHeader from './SliderHeader';
 import SliderWrapper from './SliderWrapper';
